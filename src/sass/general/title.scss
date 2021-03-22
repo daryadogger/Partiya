@@ -1,0 +1,124 @@
+//Title
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h1-lg,
+.h2,
+.h3,
+.h4,
+.h5 {
+  font-family: $font;
+  transition: all 0.3s;
+
+  span {
+    position: relative;
+  }
+}
+
+h1, .h1 {@include font-size(40px);}
+h2, .h2 {@include font-size(34px);}
+h3, .h3 {@include font-size(30px);}
+h4, .h4 {@include font-size(24px);}
+h5, .h5 {@include font-size(22px);}
+
+.fs-26 {
+  font-size: 26px;
+}
+
+.fs-24 {
+  font-size: 24px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.fs-sm-20 {
+  @media (max-width: $media-sm) {
+    font-size: 20px;
+  }
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-15 {
+  font-size: 15px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+// Color
+.color-grey {
+  color: $grey;
+}
+.color-white {
+  color: $white;
+}
+.color-red {
+  color: $red;
+}
+
+.text-muted {
+  color: $grey !important;
+  opacity: 0.8;
+}
+
+.text-muted.color-white,
+.text-muted.link--white {
+  color: $white !important;
+}
+
+.text-muted.link--white:hover {
+  color: $white !important;
+  opacity: 1;
+}
+
+.text-underline {
+  border-bottom: 1px solid #636c72;
+}
+
+//Text-size
+.text-small,
+small {
+  font-size: 87%;
+}
+
+// Text-transform
+.text-transform-none {
+  text-transform: none;
+}
+.text-transform-upper {
+  text-transform: uppercase;
+}
+
+//font-weight
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.user-select {
+  user-select: none;
+}
+
+.lh-1 {
+  line-height: 1;
+}

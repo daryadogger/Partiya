@@ -1,0 +1,33 @@
+mixin modal(data)
+  .modal.animated-modal(id="modal-request" style="display:none;" class!=attributes.class)
+    .container
+      button.btn.modal__close(type="button" aria-label="Закрыть" data-fancybox-close)
+      .section-form.pt-4.pb-4.pr-3.pl-3.pr-lg-5.pl-lg-5
+        h2.fw-500.text-transform-upper.mb-3 Оставьте заявку
+        .row
+          .col-sm-8
+            p.fs-14.mb-4 Оставьте заявку мы ответим на ваши вопросы, поможем рассчитать стоимость и обсудим условия.
+            form(action="/" method="POST")
+              label.fieldset.fieldset--border.mb-2
+                span.fieldset__label Ваше имя
+                input(type="text" name="name" placeholder="Ваше имя" autocomplete="off" required)
+                span
+
+              label.fieldset.fieldset--border.mb-2
+                span.fieldset__label Ваш телефон
+                input(type="text" name="tel" placeholder="Ваш телефон" autocomplete="off" required)
+                span
+
+              label.fieldset.fieldset--border.mb-5
+                span.fieldset__label Ваш e-mail
+                input(type="text" name="email" placeholder="Ваш e-mail" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required)
+                span
+
+
+              button.btn.btn--red.js-ripple(type="submit")
+                span.btn__content Отправить
+
+
+          .col-sm-4.d-none.d-sm-block
+            .modal__img
+              img(src="../img/letter.png", alt="" width="400")

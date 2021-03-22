@@ -1,0 +1,81 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: $font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color:$grey;
+  overflow-x: hidden;
+  -webkit-locale: auto;
+}
+
+main {
+  position: relative;
+  flex-grow: 1;
+}
+
+p {
+  line-height: 1.4;
+}
+
+a {
+  @include reset-link($link-color: $grey);
+
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  @include visually-hidden;
+}
+
+.visually-hidden-input input {
+  @include visually-hidden;
+}
+
+input, textarea, select {
+  appearance: none;
+  border-radius: 0;
+}
+
+.is-menu-open {
+  position: fixed;
+  overflow: hidden;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: $font;
+}

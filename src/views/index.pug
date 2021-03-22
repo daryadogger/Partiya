@@ -1,0 +1,47 @@
+extends layouts/layout
+
+block title
+  | Partiya: all pages
+
+block main
+  style.
+    a {
+      color: blue;
+    }
+
+    a:visited {
+      color: blue;
+    }
+
+    a:hover {
+      color: blue;
+    }
+
+    .level-third {
+      padding-left: 1em;
+    }
+  -
+    const pages = [
+      {
+        innerPages: [
+          {
+            name: 'Главная страница',
+            src: 'main.html'
+          },
+        ]
+      },
+    ];
+
+  ul.list.pl-3.pt-3
+    each page in pages
+      li
+        if page.innerPages.length > 0
+          each levelSecond in page.innerPages
+            p
+              a(href=levelSecond.src)
+                = levelSecond.name
+                if levelSecond.src.length > 0
+                  |
+                  | ---
+                  |
+                  = levelSecond.src

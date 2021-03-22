@@ -1,0 +1,14 @@
+{
+  "max": 10,
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jquery": true
+  },
+  "extends": "htmlacademy/es6",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  }
+}

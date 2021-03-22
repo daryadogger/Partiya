@@ -1,0 +1,17 @@
+mixin header(data)
+  header.header(class!=attributes.class)
+    .container.d-flex.align-items-center
+      a.link.logo(href="#")
+
+      nav.nav.d-none.d-lg-block
+        ul.list.d-flex
+          li
+            a.link.link--grey.nav__link(href="#") О компании
+
+
+      button.burger.ml-4.ml-sm-5.js-open-menu.d-lg-none(type="button" aria-label="Меню")
+        span.burger__span.burger__span--1
+        span.burger__span.burger__span--2
+        span.burger__span.burger__span--3.mb-0
+
+  .js-height

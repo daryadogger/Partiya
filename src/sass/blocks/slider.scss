@@ -1,0 +1,151 @@
+.swiper-button-prev svg {
+  transform: rotate(-180deg);
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 35px;
+  height: 35px;
+  top: 0rem;
+  color: $grey;
+  transition: all 0.3s;
+  outline: none;
+  margin: 0;
+
+  &:active {
+    color: $blue;
+  }
+
+  @media (min-width: $media-tb) {
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+.js-partners-slider,
+.js-reviews-slider {
+  user-select: none;
+}
+
+.swiper-container.js-reviews-slider {
+  padding-top: 85px;
+
+  @media (max-width: $media-td) {
+    padding-top: 0;
+  }
+}
+
+.js-reviews-slider .swiper-slide-next {
+  transition: transform 0.7s;
+  transform: translateY(-85px);
+
+  @media (max-width: $media-td) {
+    transform: translateY(0);
+  }
+}
+
+.js-reviews-slider .swiper-slide {
+  padding: 15px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 0 10px;
+
+  @media (max-width: $media-sm) {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+  }
+}
+
+.swiper-pagination-bullet {
+  opacity: 1;
+  background-color: #E8E8E8;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $red;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-50%);
+  z-index: 3;
+
+  .swiper-button-prev, .swiper-button-next, .swiper-pagination {
+    position: static;
+  }
+
+  .swiper-pagination {
+    margin: 0 10px;
+  }
+
+  @media (max-width: $media-td) {
+    position: static;
+    transform: translate(0);
+    margin-top: 10px;
+  }
+}
+
+.js-partners-slider li img {
+  width: 145px;
+}
+
+.js-partners-slider .swiper-button-prev,
+.js-partners-slider .swiper-button-next {
+  top: 6px;
+  z-index: 2;
+  background-color: $white;
+}
+
+.js-partners-slider .swiper-button-prev {
+  left: -60px;
+
+  @media (max-width: $media-md) {
+    left: -45px;
+  }
+
+  @media (max-width: 1150px) {
+    left: -25px;
+  }
+
+  @media (max-width: 1115px) {
+    left: -10px;
+  }
+
+  @media (max-width: 1040px) {
+    left: 0;
+  }
+}
+
+.js-partners-slider .swiper-button-next {
+  right: -60px;
+
+  @media (max-width: $media-md) {
+    right: -45px;
+  }
+
+  @media (max-width: 1150px) {
+    right: -25px;
+  }
+
+  @media (max-width: 1115px) {
+    right: -10px;
+  }
+
+  @media (max-width: 1040px) {
+    right: 0;
+  }
+}
