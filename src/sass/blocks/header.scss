@@ -3,16 +3,73 @@
   left: 0;
   top: 0;
   width: 100%;
-  padding: 3rem 0 2rem;
+  padding: 1rem 0 0.8rem;
   background-color: $white;
   z-index: 8;
   transition: all 0.2s;
+}
+
+.header__top {
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.header .nav {
+  li {
+    margin-right: 3rem;
+  }
+
+  a {
+    display: block;
+    font-size: 20px;
+    padding-bottom: 0.5rem;
+
+    @media (max-width: $media-md) {
+      font-size: 18px;
+    }
+  }
+}
+
+.basket {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $orange;
+  color: $white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+
+  @media (min-width: $media-tb) {
+    &:hover {
+      background-color: $orange-2;
+    }
+  }
+}
+
+.goods-number {
+  position: absolute;
+  right: -7px;
+  top: -5px;
+  background-color: $blue;
+  color: $white;
+  font-size: 12px;
+  border-radius: 50px;
+  padding: 3px 6px;
 
   @media (max-width: $media-td) {
-    padding: 1.6rem 0 1rem;
+    font-size: 11px;
+    top: 4px;
   }
+}
 
-  @media (max-width: $media-tb) {
-    padding: 1rem 0 1rem;
-  }
+.tel {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header.scroll {
+  box-shadow: 2px 2px 15px rgba(23, 23, 23, 0.1);
 }

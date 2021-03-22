@@ -6,6 +6,34 @@
   color: $black;
 
   &:active {
+    color: $orange-2;
+  }
+
+  @media (min-width: $media-tb) {
+    &:hover {
+      color: $orange-2;
+    }
+  }
+}
+
+.link--grey {
+  color: $grey;
+
+  &:active {
+    color: $blue;
+  }
+
+  @media (min-width: $media-tb) {
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+.link--orange {
+  color: $orange;
+
+  &:active {
     color: $blue;
   }
 

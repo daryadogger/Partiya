@@ -1,17 +1,52 @@
 mixin header(data)
   header.header(class!=attributes.class)
-    .container.d-flex.align-items-center
-      a.link.logo(href="#")
+    .container
+      .header__top.d-flex.align-items-center
+        a.link.logo.d-block.mr-3(href="#")
+          img(src="/img/logo.svg", alt="Логотип ГК Партия" width="279" height="100")
 
-      nav.nav.d-none.d-lg-block
-        ul.list.d-flex
-          li
-            a.link.link--grey.nav__link(href="#") О компании
+        .socials.d-flex.mr-3
+          a.link.link--orange.d-block(href="#")
+            svg.mr-4(width='35' height='35')
+              use(xlink:href="img/sprite/sprite.svg#icon-insta")
+
+          a.link.link--orange.d-block(href="#")
+            svg(width='35' height='35')
+              use(xlink:href="img/sprite/sprite.svg#icon-wp")
+
+        a.link.link--black.d-flex.align-items-center.tel.mr-3(href="tel:+78009966633")
+          svg.mr-2(width='21' height='21')
+            use(xlink:href="img/sprite/sprite.svg#icon-tel")
+          span 8-800-996-66-33
+
+        a.btn.btn--border(href="#") Заказать в 1 клик
 
 
-      button.burger.ml-4.ml-sm-5.js-open-menu.d-lg-none(type="button" aria-label="Меню")
-        span.burger__span.burger__span--1
-        span.burger__span.burger__span--2
-        span.burger__span.burger__span--3.mb-0
+        button.burger.js-open-menu.d-lg-none(type="button" aria-label="Меню")
+          span.burger__span.burger__span--1
+          span.burger__span.burger__span--2
+          span.burger__span.burger__span--3.mb-0
+
+      .header__bottom.d-none.d-lg-flex.align-items-center
+        nav.nav
+          ul.list.d-flex.flex-wrap
+            li
+              a.link.link--grey(href="#") Преимущества
+            li
+              a.link.link--grey(href="#") Примеры применения
+            li
+              a.link.link--grey(href="#") Фасовки и цены
+            li
+              a.link.link--grey(href="#") Цвета
+            li
+              a.link.link--grey(href="#") Отзывы
+            li
+              a.link.link--grey(href="#") Доставка
+
+        a.link.ml-auto.mb-2.basket(href="#")
+          svg(width='23' height='23')
+            use(xlink:href="img/sprite/sprite.svg#icon-basket")
+          .goods-number 0
+
 
   .js-height

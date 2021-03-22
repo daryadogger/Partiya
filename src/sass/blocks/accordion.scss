@@ -29,7 +29,7 @@
     transform: rotate(90deg);
     margin-top: -1px;
     margin-left: auto;
-    color: $red;
+    color: $orange;
     transition: all 0.3s;
     flex-shrink: 0;
   }
@@ -71,7 +71,7 @@
     transform: translate(-50%, -50%);
     height: 32px;
     width: 32px;
-    border: 2px solid $red;
+    border: 2px solid $orange;
     border-radius: 50%;
   }
 }
