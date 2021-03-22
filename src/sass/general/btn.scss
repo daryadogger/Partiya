@@ -8,7 +8,7 @@
   box-shadow: none !important;
 
   border-radius: 4px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .btn__content {
@@ -20,8 +20,8 @@
 }
 
 //btn colors
-.btn--red {
-  background-color: $red;
+.btn--orange {
+  background-color: $orange;
   color: $white;
 }
 
@@ -36,7 +36,7 @@
   justify-content: center;
   width: 55px;
   height: 55px;
-  background-color: $red;
+  background-color: $orange;
   color: $white;
   z-index: 10;
   border-radius: 3px;
@@ -49,7 +49,7 @@
 
   &:active {
     color: $white;
-    background-color: $red;
+    background-color: $orange;
     opacity: 1 !important;
   }
 
@@ -65,7 +65,7 @@
   @media (min-width: $media-tb) {
     &:hover {
       color: $white;
-      background-color: $red;
+      background-color: $orange;
       opacity: 1 !important;
     }
   }

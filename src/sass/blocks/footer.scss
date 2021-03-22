@@ -1,12 +1,3 @@
 .footer {
   position: relative;
-  background-color: $purple;
-}
-
-.footer .socials .link--red {
-  @media (min-width: $media-tb) {
-    &:hover {
-      color: $white;
-    }
-  }
 }

@@ -18,14 +18,18 @@ h5,
   }
 }
 
-h1, .h1 {@include font-size(40px);}
-h2, .h2 {@include font-size(34px);}
-h3, .h3 {@include font-size(30px);}
-h4, .h4 {@include font-size(24px);}
-h5, .h5 {@include font-size(22px);}
+h1, .h1 {@include font-size(55px);}
+h2, .h2 {@include font-size(40px);}
+h3, .h3 {@include font-size(36px);}
+h4, .h4 {@include font-size(28px);}
+h5, .h5 {@include font-size(24px);}
 
-.fs-26 {
-  font-size: 26px;
+.fs-48 {
+  font-size: 48px;
+}
+
+.fs-36 {
+  font-size: 36px;
 }
 
 .fs-24 {
@@ -36,18 +40,8 @@ h5, .h5 {@include font-size(22px);}
   font-size: 20px;
 }
 
-.fs-sm-20 {
-  @media (max-width: $media-sm) {
-    font-size: 20px;
-  }
-}
-
 .fs-18 {
   font-size: 18px;
-}
-
-.fs-15 {
-  font-size: 15px;
 }
 
 .fs-14 {
@@ -65,8 +59,8 @@ h5, .h5 {@include font-size(22px);}
 .color-white {
   color: $white;
 }
-.color-red {
-  color: $red;
+.color-orange {
+  color: $orange;
 }
 
 .text-muted {
@@ -74,19 +68,6 @@ h5, .h5 {@include font-size(22px);}
   opacity: 0.8;
 }
 
-.text-muted.color-white,
-.text-muted.link--white {
-  color: $white !important;
-}
-
-.text-muted.link--white:hover {
-  color: $white !important;
-  opacity: 1;
-}
-
-.text-underline {
-  border-bottom: 1px solid #636c72;
-}
 
 //Text-size
 .text-small,
@@ -103,10 +84,6 @@ small {
 }
 
 //font-weight
-.fw-500 {
-  font-weight: 500;
-}
-
 .fw-600 {
   font-weight: 600;
 }

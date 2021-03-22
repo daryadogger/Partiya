@@ -10,51 +10,13 @@
     &::before {
       @include pseudo;
 
-      background-color: $red;
+      background-color: $blue;
 
       width: 7px;
       height: 7px;
       left: 0;
       top: 6px;
       border-radius: 50%;
-    }
-  }
-}
-
-.list--check {
-  li {
-    position: relative;
-    padding-left: 25px;
-
-    &::before {
-      @include pseudo;
-
-      background: url("../img/icons/check.svg") 50% 50% no-repeat;
-      background-size: contain;
-
-      width: 18px;
-      height: 15px;
-      left: 0;
-      top: 6px;
-    }
-  }
-}
-
-.list--check-2 {
-  li {
-    position: relative;
-    padding-left: 25px;
-
-    &::before {
-      @include pseudo;
-
-      background: url("../img/icons/check-2.svg") 50% 50% no-repeat;
-      background-size: contain;
-
-      width: 15px;
-      height: 15px;
-      left: 0;
-      top: 4px;
     }
   }
 }

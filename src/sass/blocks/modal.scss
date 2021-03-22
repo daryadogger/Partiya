@@ -24,7 +24,7 @@
     top: 20px;
     width: 32px;
     height: 2px;
-    background-color: $purple;
+    background-color: $black;
     transition: all 0.3s;
     border-radius: 3px;
   }
@@ -41,7 +41,7 @@
     &:hover {
       &::before,
       &::after {
-        background-color: $red;
+        background-color: $black;
       }
     }
   }
@@ -68,44 +68,4 @@
 .fancybox-slide--current .animated-modal {
   transform: translateY(0);
   opacity: 1;
-}
-
-.modal__img {
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 400px;
-  height: 370px;
-
-  img {
-    width: 100%;
-  }
-}
-
-.modal .col-sm-8,
-.modal h2 {
-  transition: all 0.3s;
-  transform: translate(-50%);
-  opacity: 0;
-}
-
-.modal .col-sm-4 {
-  transition: all 0.3s;
-  transform: translate(50%);
-  opacity: 0;
-}
-
-.modal.show {
-  .col-sm-8,
-  h2  {
-    transition-delay: 0.4s;
-    transform: translate(0);
-    opacity: 1;
-  }
-
-  .col-sm-4 {
-    transition-delay: 0.7s;
-    transform: translate(0);
-    opacity: 1;
-  }
 }
