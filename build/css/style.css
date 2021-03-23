@@ -10133,6 +10133,10 @@ button, input, optgroup, select, textarea {
 .border-radius {
   border-radius: 25px; }
 
+.bg-wood {
+  background: url("../img/bg-wood.jpg") 50% 50% no-repeat;
+  background-size: cover; }
+
 .btn {
   display: inline-block;
   padding: 0;
@@ -10456,6 +10460,8 @@ small {
   transition: all 0.2s; }
 
 .header__top {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   -webkit-box-pack: justify;
           justify-content: space-between;
   margin-bottom: 2rem; }
@@ -10507,13 +10513,18 @@ small {
   font-weight: 700; }
 
 .header.scroll {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   -webkit-box-shadow: 2px 2px 15px rgba(23, 23, 23, 0.1);
           box-shadow: 2px 2px 15px rgba(23, 23, 23, 0.1); }
+  .header.scroll .header__top {
+    margin-bottom: 0.3rem; }
 
 .promo {
   min-height: 500px;
   border-radius: 15px 15px 0 0;
-  background-color: #F99F4D; }
+  background: #F99F4D url("../img/promo.jpg") 100% 50% no-repeat;
+  background-size: contain; }
   .promo .lg {
     font-size: 90px; }
   .promo .btn__content {
@@ -10901,6 +10912,42 @@ small {
 
 .accordion__inner {
   padding: 0 30px 10px 30px; }
+
+.table {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 0 3rem; }
+
+.colors-block {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px; }
+
+.colors-block__item {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  width: 165px;
+  padding: 20px;
+  margin-right: 25px;
+  margin-bottom: 15px;
+  background: #ffffff;
+  -webkit-box-shadow: 2px 2px 15px rgba(23, 23, 23, 0.1);
+          box-shadow: 2px 2px 15px rgba(23, 23, 23, 0.1);
+  border-radius: 20px; }
+  .colors-block__item img {
+    margin-bottom: 10px; }
+  .colors-block__item p {
+    font-size: 18px;
+    margin-bottom: 0; }
+  .colors-block__item.active {
+    color: #ffffff;
+    background-color: #FF6915; }
 
 .footer {
   position: relative;
