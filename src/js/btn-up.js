@@ -3,7 +3,7 @@ const btnUp = () => {
   $(window).scroll(function() {
     if ($(this).scrollTop() > 200) {
         if ($('#upbutton').is(':hidden')) {
-            $('#upbutton').css({opacity : 0.7}).fadeIn('fast');
+            $('#upbutton').css({opacity : 0.9}).fadeIn('fast');
         }
     } else { $('#upbutton').stop(true, false).fadeOut('fast'); }
   });

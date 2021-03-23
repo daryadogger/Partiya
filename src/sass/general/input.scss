@@ -1,47 +1,31 @@
 .fieldset {
+  display: flex;
+  align-items: center;
+
   input,
   textarea {
     position: relative;
     width: 100%;
     border: none;
     background-color: transparent;
-    padding: 10px 0 12px;
+    padding: 12px 15px;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.2;
     outline: none;
     transition: all 0.3s;
     box-shadow: none;
-    border-radius: 0;
+    border-radius: 5px;
     border: none;
     color: $grey;
-    border-bottom: 1px solid rgba(66, 66, 66, 0.2);
-
-    &::placeholder {
-      font-size: 18px;
-      color: rgba($grey, 0.6);
-      transition: all 0.3s;
-    }
-
-    &+span::before {
-      position: absolute;
-      content: "";
-      left: 0;
-      width: 0;
-      bottom: 0;
-      height: 0.9px;
-      background-color: $orange;
-      transition: width 0.9s;
-    }
-
-    &:focus {
-      &+span::before {
-        width: 100%;
-      }
-    }
+    border: 1px solid $white;
 
     @media (max-width: $media-md) {
       font-size: 16px;
+    }
+
+    &:focus {
+      background-color: $white;
     }
   }
 
@@ -53,15 +37,10 @@
 .fieldset__label {
   display: inline-block;
   margin-bottom: 0;
-  font-size: 16px;
-  color: $orange;
-  font-weight: 400;
-  opacity: 0;
+  font-size: 18px;
+  color: $white;
+  font-weight: 600;
   transition: all 0.5s;
-  transform: translate(-12%);
-
-  &.focus {
-    opacity: 1;
-    transform: translate(0);
-  }
+  width: 107px;
+  flex-shrink: 0;
 }

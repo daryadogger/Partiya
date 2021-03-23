@@ -1,8 +1,49 @@
 mixin footer(data)
   footer.footer(class!=attributes.class)
     .container
-      a.link(href="#")
-        span.fs-14 Политика обработки персональных данных
-        
-      a.link.fs-14.fw-500(href="https://www.e1media.ru/" target="_blank") Разработка сайта — Е1медиа
+      .row
+        .col-lg-6.footer__col.footer__col--color
+          .mb-4
+            .mb-5
+              p.fs-24.fw-700.color-white.mb-2 Оставьте заявку. Мы поможем расчитать колличество герметика
+              p.fs-12.fw-600.color-white С вами свяжуться в течении 5-7 минут
+
+            form(action="/" method="POST")
+              label.fieldset.mb-2
+                span.fieldset__label Имя
+                input(type="text" name="name" autocomplete="off" required)
+
+              label.fieldset.mb-2
+                span.fieldset__label Телефон
+                input(type="text" name="tel" autocomplete="off" required)
+
+              button.btn.btn--orange.js-ripple.mt-4(type="submit")
+                span.btn__content Оставить заявку
+
+          a.link.link--white.link--underlined.mt-auto(href="#")
+            span.fs-14 Политика обработки персональных данных
+
+        .col-lg-6.footer__col
+          .mb-4
+            a.link.logo.d-block.pb-4(href="#")
+              img(src="/img/logo-2.svg", alt="Логотип ГК Партия" width="279" height="100")
+
+            a.link.link--white.d-block.fs-36.fw-700.pb-3(href="tel:+78009966633") 8-800-996-66-33
+
+            .mb-4
+              p.fs-18.fw-700.color-white ИП Иванов Иван Иванович
+              p.fs-18.fw-700.color-white ИНН: 99999999
+              p.fs-18.fw-700.color-white ОГРН: 00099000
+
+            .socials.d-flex.mb-4
+              a.link.link--white.d-block(href="#")
+                svg.mr-4.fill-color(width='45' height='45')
+                  use(xlink:href="img/sprite/sprite.svg#icon-insta-2")
+
+              a.link.link--white.d-block(href="#")
+                svg(width='45' height='45')
+                  use(xlink:href="img/sprite/sprite.svg#icon-wp")
+
+
+          a.link.link--white.fs-14.fw-700.footer__dev.mt-auto(href="https://www.e1media.ru/" target="_blank") Разработка сайта — Е1медиа
 

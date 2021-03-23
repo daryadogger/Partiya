@@ -23,35 +23,41 @@ block main
             a.btn.js-ripple.btn--orange(href="#")
               .btn__content Заказать от 227₽
 
+        .animated-item
+          img(src='/img/animated-string.png' alt='')
+
+      img(src="/img/promo.jpg", alt="")
+
     .mb-100
       .container
         h2.fw-700.mb-5 Преимущества нашего герметика
 
         .row
-          .col-md-6.d-flex
+          .col-md-7.col-lg-6.d-flex
             .row
               .col-6.d-flex.mb-3
                 .card.card--advantages
-                  img(src="/img/icons/adv-1.png", alt="" width="100" height="100")
+                  img(src="/img/icons/earth.svg", alt="icon" width="100" height="100")
                   p Он экологичен, не принесет вреда ни деревянным зданиям, ни их жильцам
 
               .col-6.d-flex.mb-3
                 .card.card--advantages
-                  img(src="/img/icons/adv-2.png", alt="" width="100" height="100")
+                  img(src="/img/icons/sunny.svg", alt="icon" width="100" height="100")
                   p Не изменяет внешнего вида или своих свойств под влиянием ультрафиолетовых лучей
+
 
               .col-6.d-flex.mb-3
                 .card.card--advantages
-                  img(src="/img/icons/adv-3.svg", alt="" width="100" height="100")
+                  img(src="/img/icons/rain.svg", alt="icon" width="100" height="100")
                   p Устойчив к влаге, снегу, дождю, солнечным лучам и другим внешним факторам
 
               .col-6.d-flex.mb-3
                 .card.card--advantages
-                  img(src="/img/icons/adv-4.svg", alt="" width="100" height="100")
+                  img(src="/img/icons/house.svg", alt="icon" width="100" height="100")
                   p Не боится движения древесины, способен изменять свои размеры и не разрываться при этом
 
 
-          .col-md-6.d-flex.align-items-center
+          .col-md-5.col-lg-6.d-flex.align-items-center
             img(src="/img/good-1.png", alt="")
 
     .mb-100
@@ -66,13 +72,13 @@ block main
             p.fs-20 Герметик “тёплый шов” обновляют раз в 30 лет. При правильном использовании он гарантирует отстуствие теплопотерь через межвенцовые стыки.
             p.fs-20.mb-5 Герметик отлично переносит неизбежные подвижки сруба. Улучшает внешний вид дома, делает его аккуратным и современным.
             .d-flex.align-items-center
-              img(src="/img/icons/medal.svg", alt="")
+              img.mr-2(src="/img/icons/medal.svg", alt="")
               span Наш герметик дает 100%<br> гермитизации
 
 
           .col-md-6.col-lg-5.d-flex
             a.link.d-block.w-100(data-fancybox="photo" href="img/photo-1.jpg")
-              .bg.h-450.border-radius(style="background-image: url(../img/photo-1.jpg);")
+              .bg.h-500.border-radius(style="background-image: url(../img/photo-1.jpg);")
 
     .mb-100
       .container
@@ -86,6 +92,112 @@ block main
 
           .col-md-6.d-flex.align-items-center
 
+    .mb-100
+      .container
+        h2.fw-700.mb-5.text-center Что говорят люди
+
+    .mb-100
+      .container
+        .row
+          .col-lg-6.d-flex.align-items-center
+            img(src="/img/photo-5.jpg", alt="")
+
+          .col-lg-6.d-flex.flex-column.justify-content-center
+            h2.fw-700.mb-4 Доставим в ваш город
+            p.fs-20 Доставляем по всей России и странам СНГ. Отправляем выбранной вами транспортной компанией.
+
+
+    .mb-100
+      .container
+        h2.fw-700.mb-5 Фасовки и цены
+
+
+    .mb-100
+      .container
+        h2.fw-700.mb-2 Калькулятор расхода герметика
+        p.fs-20.fw-600.subtitle.mb-0 Рассчитайте расход герметика в три постых шага
+
+        .row
+          .col-lg-6.pt-5
+            p.fs-24.fw-600 Введите метраж под герметизацию
+
+          .col-lg-6
+            .bg.h-500.border-radius(style="background-image: url(../img/photo-4.jpg);")
+
+    .mb-100
+      .container
+        h2.fw-700.mb-5 Часто задаваемые вопросы
+
+        .row
+          .col-lg-9
+            .accordion
+              .accordion__item
+                a.accordion__label.link.link--white.d-flex.align-items-center(href="#")
+                  span.pr-4 Технические характеристики герметика
+                  .accordion__icon
+                    svg(width="16" height="16")
+                      use(xlink:href="img/sprite/sprite.svg#icon-plus")
+
+                .accordion__content
+                  .accordion__inner
+                    p Доставляем по всей России и странам СНГ. Отправляем выбранной вами транспортной компанией.
+
+              .accordion__item
+                a.accordion__label.link.link--white.d-flex.align-items-center(href="#")
+                  span.pr-4 Полная инструкция по преминению
+                  .accordion__icon
+                    svg(width="16" height="16")
+                      use(xlink:href="img/sprite/sprite.svg#icon-plus")
+
+                .accordion__content
+                  .accordion__inner
+                    p Доставляем по всей России и странам СНГ. Отправляем выбранной вами транспортной компанией. Доставляем по всей России и странам СНГ. Отправляем выбранной вами транспортной компанией.
+
+              .accordion__item
+                a.accordion__label.link.link--white.d-flex.align-items-center(href="#")
+                  span.pr-4 Прогнозируемый расход
+                  .accordion__icon
+                    svg(width="16" height="16")
+                      use(xlink:href="img/sprite/sprite.svg#icon-plus")
+
+                .accordion__content
+                  .accordion__inner
+                    p Доставляем по всей России и странам СНГ. Отправляем выбранной вами транспортной компанией. Доставляем по всей России и странам СНГ. Отправляем выбранной вами транспортной компанией. Доставляем по всей России и странам СНГ. Отправляем выбранной вами транспортной компанией.
+
+
+    .mb-100
+      .container
+        h2.fw-700.mb-5.text-center Сертификаты
+
+        .swiper-container.js-sertificates-slider.sertificates-slider
+          ul.list.swiper-wrapper
+            li.swiper-slide
+              a.link(data-fancybox="gallery" href="img/sert-1.jpg")
+                .bg.bg--contain.h-350(style="background-image: url(../img/sert-1.jpg);")
+
+            li.swiper-slide
+              a.link(data-fancybox="gallery" href="img/sert-2.jpg")
+                .bg.bg--contain.h-350(style="background-image: url(../img/sert-2.jpg);")
+
+            li.swiper-slide
+              a.link(data-fancybox="gallery" href="img/sert-1.jpg")
+                .bg.bg--contain.h-350(style="background-image: url(../img/sert-1.jpg);")
+
+            li.swiper-slide
+              a.link(data-fancybox="gallery" href="img/sert-2.jpg")
+                .bg.bg--contain.h-350(style="background-image: url(../img/sert-2.jpg);")
+
+            li.swiper-slide
+              a.link(data-fancybox="gallery" href="img/sert-1.jpg")
+                .bg.bg--contain.h-350(style="background-image: url(../img/sert-1.jpg);")
+
+          .swiper-button-prev
+            svg(width="12" height="23")
+              use(xlink:href="img/sprite/sprite.svg#icon-arrow-small")
+          .swiper-button-next
+            svg(width="12" height="23")
+              use(xlink:href="img/sprite/sprite.svg#icon-arrow-small")
+
 
 
 
@@ -96,8 +208,8 @@ block footer
   .shade Ваши данные отправлены
 
   a.btn-up(href="#" aria-label="Наверх" id="upbutton")
-    svg(width="28" height="25")
-      use(xlink:href="img/sprite/sprite.svg#icon-arrow")
+    svg(width="18" height="22")
+      use(xlink:href="img/sprite/sprite.svg#icon-arrow-small")
 
 block modal
   //- +modal()

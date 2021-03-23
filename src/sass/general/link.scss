@@ -43,3 +43,23 @@
     }
   }
 }
+
+.link--white {
+  color: $white;
+
+  &:active {
+    color: $blue;
+  }
+
+  @media (min-width: $media-tb) {
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+.link--underlined {
+  span {
+    border-bottom: 1px solid;
+  }
+}

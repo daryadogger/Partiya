@@ -8,7 +8,6 @@ const accordion = () => {
     const $thiss = $(this);
     const $side = $thiss.find(`.accordion__label`);
     const $main = $thiss.find(`.accordion__content`);
-    $main.slideUp();
 
     $side.on(`click`, (evt) => {
       evt.preventDefault();

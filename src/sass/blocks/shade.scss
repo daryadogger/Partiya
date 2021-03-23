@@ -3,7 +3,7 @@
   bottom: 60px;
   left: 40px;
   min-width: 240px;
-  padding: 13px 45px;
+  padding: 18px 50px;
   min-height: 55px;
   display: flex;
   justify-content: center;
@@ -16,9 +16,9 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  border-radius: 4px;
-  font-size: 18px;
-  font-weight: 400;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 600;
   text-align: center;
   box-shadow: 0px 3px 15px rgba($black, 0.4);
   background-color: $blue;
@@ -29,6 +29,6 @@
     left: 50%;
     transform: translate(-50%);
     padding: 15px 15px;
-    font-size: 16px;
+    font-size: 18px;
   }
 }

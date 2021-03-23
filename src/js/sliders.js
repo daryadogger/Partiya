@@ -1,35 +1,33 @@
 const sliders = () => {
   const Swiper = window.Swiper;
 
-  // Slider partners
-  const partners = document.querySelector(".js-partners-slider");
+  // Slider sertificates
+  const sertificates = document.querySelector(".js-sertificates-slider");
 
-  if (partners) {
-    const mySwiper = new Swiper(".js-partners-slider .swiper-container", {
+  if (sertificates) {
+    const mySwiper = new Swiper(".js-sertificates-slider.swiper-container", {
       direction: "horizontal",
       slidesPerView: 1,
-      spaceBetween: 15,
-      navigation: {
-        nextEl: ".js-partners-slider .swiper-button-next",
-        prevEl: ".js-partners-slider .swiper-button-prev",
-      },
+      spaceBetween: 20,
+      speed: 400,
+      loop: true,
       breakpoints: {
-        450: {
+        500: {
           slidesPerView: 2,
           spaceBetween: 15,
         },
-        650: {
+        575: {
           slidesPerView: 3,
           spaceBetween: 15,
         },
-        850: {
-          slidesPerView: 4,
-          spaceBetween: 10,
+        991: {
+          slidesPerView: 3,
+          spaceBetween: 20,
         },
-        1120: {
-          slidesPerView: 5,
-          spaceBetween: 40,
-        },
+      },
+      navigation: {
+        nextEl: ".js-sertificates-slider .swiper-button-next",
+        prevEl: ".js-sertificates-slider .swiper-button-prev",
       },
     });
   }
