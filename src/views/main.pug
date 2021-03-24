@@ -156,6 +156,43 @@ block main
       .container
         h2.fw-700.mb-5.text-center Что говорят люди
 
+        .swiper-container.js-reviews-slider.reviews-slider
+          ul.list.swiper-wrapper
+            li.swiper-slide
+              .card.card--review
+                .card__side.bg(style="background-image: url(../img/review-1.jpg);")
+
+                .card__main
+                  p Ольга Викторовна
+                  p Алтайский край
+                  p Я покупала герметик в это магазине, чтобы утеплить свой загородный дом. Сделали заказа и нам перезвонила девушка, которая помогла точно определить колличество, которое будет расходовано. Мы остались довольны качеством самого герметика. Наносится он очень просто. Наносили герметик шпателем и использовали жгут для утепления швов, по технологии тёплый шов.
+
+            li.swiper-slide
+              .card.card--review
+                .card__side.bg(style="background-image: url(../img/review-2.jpg);")
+
+                .card__main
+                  p Григорий
+                  p Алтайский край
+                  p Мы покупали герметик в 2015 году на одну постройку и в 2016 году на другую. Обе постройки на даче большие - гостевой дом и баня. Герметик имеет огромный опыт в утеплении и мы для себя его переняли. Наносили все сами с местными ребятами по видео инструкциям с ютуба.
+
+            li.swiper-slide
+              .card.card--review
+                .card__side.bg(style="background-image: url(../img/review-3.jpg);")
+
+                .card__main
+                  p Александр Иванов
+                  p Алтайский край
+                  p Заказывали несколько ведер для утепления бани! Очень довольны сервисом и качеством герметика, Консультант рассказала все, помогла подобрать цвет. Рекомендую этот магазин!
+
+          .swiper-button-prev
+            svg(width="10" height="18")
+              use(xlink:href="img/sprite/sprite.svg#icon-arrow-small")
+          .swiper-button-next
+            svg(width="10" height="18")
+              use(xlink:href="img/sprite/sprite.svg#icon-arrow-small")
+
+
     .mb-100
       .container
         .row
@@ -174,9 +211,9 @@ block main
       .bg-wood.pt-5.pb-5
         .container
           .row
-            .col-md-6
+            .col-md-6.mb-4.d-flex
               .card.card--good.p-4
-                .card__main
+                .card__main.mb-4
                   .card__img(style="background-image: url(../img/good-4.png);")
 
                   .card__info
@@ -184,13 +221,13 @@ block main
                       span.fs-24.mr-3.lh-1.fw-600 Картридж
                       span 0,31 л
 
-                    .d-flex.align-items-end
+                    .d-flex.align-items-end.mb-4
                       .price.mr-3
                         span.mr-1 226
                         span ₽
                       span.text-muted.fs-12.fw-600 990 руб\л
 
-                    .d-flex.quantity.js-quantity.align-items-center
+                    .d-flex.quantity.js-quantity.align-items-center.mb-3
                       button.btn.quantity__btn.js-decrease.mr-1(type="button" aria-Label="Уменьшить количество")
                         svg(width="12" height="12")
                           use(xlink:href="img/sprite/sprite.svg#icon-minus")
@@ -213,12 +250,122 @@ block main
                     span ₽
 
 
+            .col-md-6.mb-4.d-flex
+              .card.card--good.p-4
+                .card__main.mb-4
+                  .card__img(style="background-image: url(../img/good-2.png);")
 
-            .col-md-6
+                  .card__info
+                    .d-flex.align-items-end.mb-4
+                      span.fs-24.mr-3.lh-1.fw-600 Фолиевая туба
+                      span 0,5 л
 
-            .col-md-6
+                    .d-flex.align-items-end.mb-4
+                      .price.mr-3
+                        span.mr-1 226
+                        span ₽
+                      span.text-muted.fs-12.fw-600 990 руб\л
 
-            .col-md-6
+                    .d-flex.quantity.js-quantity.align-items-center.mb-3
+                      button.btn.quantity__btn.js-decrease.mr-1(type="button" aria-Label="Уменьшить количество")
+                        svg(width="12" height="12")
+                          use(xlink:href="img/sprite/sprite.svg#icon-minus")
+
+                      input.js-number(type="text" value="1" name="quantity-input-7" id="quantity-input-7")
+
+                      button.btn.quantity__btn.js-increase.ml-1(type="button" aria-Label="Увеличить количество")
+                        svg(width="12" height="12")
+                          use(xlink:href="img/sprite/sprite.svg#icon-plus-2")
+
+                    p.text-muted.fs-14 Цвет герметика указывается при оформлении заказа
+
+                .card__side
+                  a.btn.js-ripple.btn--orange.mr-3(href="#")
+                    .btn__content Добавить к заказу
+
+                  .price
+                    span.price__total.mr-2 Итого
+                    span.mr-1 452
+                    span ₽
+
+
+            .col-md-6.mb-4.d-flex
+              .card.card--good.p-4
+                .card__main.mb-4
+                  .card__img(style="background-image: url(../img/good-3.png);")
+
+                  .card__info
+                    .d-flex.align-items-end.mb-4
+                      span.fs-24.mr-3.lh-1.fw-600 Ведро
+                      span 5 л
+
+                    .d-flex.align-items-end.mb-4
+                      .price.mr-3
+                        span.mr-1 226
+                        span ₽
+                      span.text-muted.fs-12.fw-600 990 руб\л
+
+                    .d-flex.quantity.js-quantity.align-items-center.mb-3
+                      button.btn.quantity__btn.js-decrease.mr-1(type="button" aria-Label="Уменьшить количество")
+                        svg(width="12" height="12")
+                          use(xlink:href="img/sprite/sprite.svg#icon-minus")
+
+                      input.js-number(type="text" value="1" name="quantity-input-7" id="quantity-input-7")
+
+                      button.btn.quantity__btn.js-increase.ml-1(type="button" aria-Label="Увеличить количество")
+                        svg(width="12" height="12")
+                          use(xlink:href="img/sprite/sprite.svg#icon-plus-2")
+
+                    p.text-muted.fs-14 Цвет герметика указывается при оформлении заказа
+
+                .card__side
+                  a.btn.js-ripple.btn--orange.mr-3(href="#")
+                    .btn__content Добавить к заказу
+
+                  .price
+                    span.price__total.mr-2 Итого
+                    span.mr-1 452
+                    span ₽
+
+
+            .col-md-6.mb-4.d-flex
+              .card.card--good.p-4
+                .card__main.mb-4
+                  .card__img(style="background-image: url(../img/good-3.png);")
+
+                  .card__info
+                    .d-flex.align-items-end.mb-4
+                      span.fs-24.mr-3.lh-1.fw-600 Ведро
+                      span 10 л
+
+                    .d-flex.align-items-end.mb-4
+                      .price.mr-3
+                        span.mr-1 226
+                        span ₽
+                      span.text-muted.fs-12.fw-600 990 руб\л
+
+                    .d-flex.quantity.js-quantity.align-items-center.mb-3
+                      button.btn.quantity__btn.js-decrease.mr-1(type="button" aria-Label="Уменьшить количество")
+                        svg(width="12" height="12")
+                          use(xlink:href="img/sprite/sprite.svg#icon-minus")
+
+                      input.js-number(type="text" value="1" name="quantity-input-7" id="quantity-input-7")
+
+                      button.btn.quantity__btn.js-increase.ml-1(type="button" aria-Label="Увеличить количество")
+                        svg(width="12" height="12")
+                          use(xlink:href="img/sprite/sprite.svg#icon-plus-2")
+
+                    p.text-muted.fs-14 Цвет герметика указывается при оформлении заказа
+
+                .card__side
+                  a.btn.js-ripple.btn--orange.mr-3(href="#")
+                    .btn__content Добавить к заказу
+
+                  .price
+                    span.price__total.mr-2 Итого
+                    span.mr-1 452
+                    span ₽
+
 
 
 

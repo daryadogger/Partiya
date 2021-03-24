@@ -57,28 +57,36 @@
   transform: rotate(180deg) translateX(-2px);
 }
 
-.sertificates-slider .swiper-button-next,
-.sertificates-slider .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
   box-shadow: 0 3px 15px rgba(#5E5E5E, 0.3);
 }
 
-.sertificates-slider {
+.sertificates-slider,
+.reviews-slider {
   padding: 90px 0 90px;
 
   .swiper-button-next {
-    right: 30%;
+    right: 28%;
   }
 
   .swiper-button-prev {
-    left: 30%;
+    left: 28%;
   }
 }
 
-.sertificates-slider .swiper-slide {
-  transition: transform .3s ease;
+.reviews-slider {
+  padding: 120px 0 120px;
+}
 
+.sertificates-slider .swiper-slide,
+.reviews-slider .swiper-slide {
+  transition: transform .3s ease;
+}
+
+.sertificates-slider .swiper-slide {
   &.swiper-slide-active {
-    transform: scale(1.35,1.38);
+    transform: scale(1.35, 1.38);
   }
 
   a {
@@ -88,6 +96,17 @@
       &:hover {
         transform: translateY(-6px);
       }
+    }
+  }
+}
+
+.reviews-slider .swiper-slide {
+  &.swiper-slide-active {
+    transform: scale(1.2, 1.2);
+
+    .card {
+      box-shadow: 2px 2px 15px rgba(23, 23, 23, 0.1);
+      border-radius: 12px;
     }
   }
 }
