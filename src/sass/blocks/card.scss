@@ -21,3 +21,45 @@
     color: $black;
   }
 }
+
+.card--good {
+  .card__main {
+    display: flex;
+  }
+
+  .price {
+    display: flex;
+    align-items: flex-end;
+    margin-left: auto;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1;
+
+    &__total {
+      font-weight: 400;
+      font-size: 20px;
+      margin-bottom: 2px;
+    }
+  }
+
+  .card__info {
+    .price {
+      margin-left: 0;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+
+  .card__side {
+    display: flex;
+    align-items: center;
+  }
+
+  .card__img {
+    width: 250px;
+    height: 200px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

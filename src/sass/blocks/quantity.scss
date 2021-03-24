@@ -1,0 +1,36 @@
+.quantity {
+  input {
+    width: 45px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1.25;
+    border: none;
+    border-radius: 4px;
+    background-color: #F1F3FF;
+    color: #434242;
+    text-align: center;
+    outline: none;
+    font-weight: 500;
+  }
+}
+
+.quantity__btn {
+  padding: 0;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: $white;
+  background-color: $orange;
+  outline: none !important;
+
+  &:active {
+    background-color: $orange-2;
+  }
+
+  @media (min-width: $media-tb) {
+    &:hover {
+      background-color: $orange-2;
+    }
+  }
+}

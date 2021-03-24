@@ -8,6 +8,7 @@ import sliders from './sliders';
 import number from './number';
 import btnUp from './btn-up';
 import accordion from './accordion';
+import goodQuantity from './good-quantity';
 
 class App {
   static init() {
@@ -21,6 +22,7 @@ class App {
     number();
     btnUp();
     accordion();
+    goodQuantity();
   }
 }
 

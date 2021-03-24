@@ -11,6 +11,7 @@ const sliders = () => {
       spaceBetween: 20,
       speed: 400,
       loop: true,
+      centeredSlides: true,
       breakpoints: {
         500: {
           slidesPerView: 2,
@@ -22,7 +23,7 @@ const sliders = () => {
         },
         991: {
           slidesPerView: 3,
-          spaceBetween: 20,
+          spaceBetween: 120,
         },
       },
       navigation: {
