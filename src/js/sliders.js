@@ -1,6 +1,23 @@
 const sliders = () => {
   const Swiper = window.Swiper;
 
+  // Adv sertificates
+  const advantages = document.querySelector(".js-advantages-slider");
+
+  if (advantages) {
+    const mySwiper = new Swiper(".js-advantages-slider.swiper-container", {
+      direction: "horizontal",
+      slidesPerView: 1,
+      spaceBetween: 20,
+      speed: 400,
+      navigation: {
+        nextEl: ".js-advantages-slider .swiper-button-next",
+        prevEl: ".js-advantages-slider .swiper-button-prev",
+      },
+    });
+  }
+
+
   // Reviews sertificates
   const reviews = document.querySelector(".js-reviews-slider");
 

@@ -85,9 +85,9 @@
   <div class="js-height"></div>
   <main>
     <div class="mb-100 promo">
-      <div class="container pt-5 pb-5">
-        <div class="row">
-          <div class="col-md-6">
+      <div class="container">
+        <div class="row h-100">
+          <div class="col-md-6 pt-5 pb-5 promo__col promo__col--orange">
             <h1 class="fw-700 color-white mb-4">
               <span class="lg">Герметик</span>
               <span>«Тёплый шов»</span>
@@ -97,9 +97,11 @@
               <div class="btn__content">Заказать от 227₽</div>
             </a>
           </div>
-          <div class="col-md-6">
-            <img src="/img/promo-1.png" alt="">
-          </div>
+          <div class="col-md-6"></div>
+        </div>
+        <div class="promo__img">
+          <img class="promo__good" src="/img/promo-2.png" alt="">
+          <img class="promo__good promo__good--sm" src="/img/promo-2.png" alt="">
         </div>
         <div class="animated-item">
           <img src="/img/animated-string.png" alt="">
@@ -115,31 +117,57 @@
               <div class="col-6 d-flex mb-3">
                 <div class="card card--advantages">
                   <img src="/img/icons/earth.svg" alt="icon" width="100" height="100">
-                  <p>Он экологичен, не принесет вреда ни деревянным зданиям, ни их жильцам</p>
+                  <p class="color-black">Он экологичен, не принесет вреда ни деревянным зданиям, ни их жильцам</p>
                 </div>
               </div>
               <div class="col-6 d-flex mb-3">
                 <div class="card card--advantages">
                   <img src="/img/icons/sunny.svg" alt="icon" width="100" height="100">
-                  <p>Не изменяет внешнего вида или своих свойств под влиянием ультрафиолетовых лучей</p>
+                  <p class="color-black">Не изменяет внешнего вида или своих свойств под влиянием ультрафиолетовых лучей</p>
                 </div>
               </div>
               <div class="col-6 d-flex mb-3">
                 <div class="card card--advantages">
                   <img src="/img/icons/rain.svg" alt="icon" width="100" height="100">
-                  <p>Устойчив к влаге, снегу, дождю, солнечным лучам и другим внешним факторам</p>
+                  <p class="color-black">Устойчив к влаге, снегу, дождю, солнечным лучам и другим внешним факторам</p>
                 </div>
               </div>
               <div class="col-6 d-flex mb-3">
                 <div class="card card--advantages">
                   <img src="/img/icons/house.svg" alt="icon" width="100" height="100">
-                  <p>Не боится движения древесины, способен изменять свои размеры и не разрываться при этом</p>
+                  <p class="color-black">Не боится движения древесины, способен изменять свои размеры и не разрываться при этом</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-5 col-lg-6 d-flex align-items-center">
-            <img src="/img/good-1.png" alt="">
+            <div class="ellipse">
+              <div class="swiper-container js-advantages-slider advantages-slider">
+                <ul class="list swiper-wrapper">
+                  <li class="swiper-slide">
+                    <img src="/img/good-1.png" alt="">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/img/good-1.png" alt="">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/img/good-1.png" alt="">
+                  </li>
+                </ul>
+                <div class="swiper-button-prev">
+                  <svg width="15" height="25">
+                    <use xlink:href="img/sprite/sprite.svg#icon-arrow-small"></use>
+                  </svg>
+                </div>
+                <div class="swiper-button-next">
+                  <svg width="15" height="25">
+                    <use xlink:href="img/sprite/sprite.svg#icon-arrow-small"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="ellipse__item"></div>
+              <div class="ellipse__item ellipse__item--2"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -183,12 +211,12 @@
         <h2 class="fw-700 mb-5 text-center">Так герметик выглядит на стенах</h2>
       </div>
     </div>
-    <div class="mb-100">
+    <div class="mb-100 colors-block">
       <div class="container">
         <div class="row">
           <div class="col-md-6 d-flex flex-column">
             <h2 class="fw-700 mb-5">Подбор цвета</h2>
-            <div class="colors-block">
+            <div class="colors-block__list">
               <a class="link colors-block__item" href="#">
                 <img src="/img/icons/color-1.png" alt="">
                 <p>Белый</p>
@@ -244,7 +272,43 @@
             </div>
           </div>
           <div class="col-md-6 d-flex align-items-center">
-            <img src="/img/photo-6.jpg" alt="">
+            <div class="ellipse">
+              <div class="colors-block__img">
+                <img src="/img/photo-6.jpg" alt="">
+                <p>Орех</p>
+              </div>
+              <div class="ellipse__item"></div>
+              <div class="ellipse__item ellipse__item--2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-100">
+      <div class="bg-wood pt-5 pb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-4 d-flex mb-3">
+              <div class="card card--advantages">
+                <img src="/img/icons/clock.svg" alt="icon" width="120" height="120">
+                <p class="fw-700 fs-20 mb-2 color-orange">Один раз сделал и забыл</p>
+                <p class="fs-18 fw-600 text-muted">Наш герметик прослужит в два раза дольше обычного, и в 20 раз дольше конопатки.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 d-flex mb-3">
+              <div class="card card--advantages">
+                <img src="/img/icons/temp.svg" alt="icon" width="120" height="120">
+                <p class="fw-700 fs-20 mb-2 color-orange">Для самых сложных условий</p>
+                <p class="fs-18 fw-600 text-muted">Сохраняет свойства при температуре от +80 до -60.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 d-flex mb-3">
+              <div class="card card--advantages">
+                <img src="/img/icons/snap.svg" alt="icon" width="120" height="120">
+                <p class="fw-700 fs-20 mb-2 color-orange">Не требует спецподготовки</p>
+                <p class="fs-18 fw-600 text-muted">Прекрасно наносится даже на влажную поверхность. Наносится и в межсезонье до -10C.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -256,30 +320,30 @@
           <ul class="list swiper-wrapper">
             <li class="swiper-slide">
               <div class="card card--review">
-                <div class="card__side bg" style="background-image: url(../img/review-1.jpg);"></div>
+                <div class="card__side bg mb-4" style="background-image: url(../img/review-1.jpg);"></div>
                 <div class="card__main">
-                  <p>Ольга Викторовна</p>
-                  <p>Алтайский край</p>
+                  <p class="mb-1 name">Ольга Викторовна</p>
+                  <p class="mb-2 subtitle">Алтайский край</p>
                   <p>Я покупала герметик в это магазине, чтобы утеплить свой загородный дом. Сделали заказа и нам перезвонила девушка, которая помогла точно определить колличество, которое будет расходовано. Мы остались довольны качеством самого герметика. Наносится он очень просто. Наносили герметик шпателем и использовали жгут для утепления швов, по технологии тёплый шов.</p>
                 </div>
               </div>
             </li>
             <li class="swiper-slide">
               <div class="card card--review">
-                <div class="card__side bg" style="background-image: url(../img/review-2.jpg);"></div>
+                <div class="card__side bg mb-4" style="background-image: url(../img/review-2.jpg);"></div>
                 <div class="card__main">
-                  <p>Григорий</p>
-                  <p>Алтайский край</p>
+                  <p class="mb-1 name">Григорий</p>
+                  <p class="mb-2 subtitle">Алтайский край</p>
                   <p>Мы покупали герметик в 2015 году на одну постройку и в 2016 году на другую. Обе постройки на даче большие - гостевой дом и баня. Герметик имеет огромный опыт в утеплении и мы для себя его переняли. Наносили все сами с местными ребятами по видео инструкциям с ютуба.</p>
                 </div>
               </div>
             </li>
             <li class="swiper-slide">
               <div class="card card--review">
-                <div class="card__side bg" style="background-image: url(../img/review-3.jpg);"></div>
+                <div class="card__side bg mb-4" style="background-image: url(../img/review-3.jpg);"></div>
                 <div class="card__main">
-                  <p>Александр Иванов</p>
-                  <p>Алтайский край</p>
+                  <p class="mb-1 name">Александр Иванов</p>
+                  <p class="mb-2 subtitle">Алтайский край</p>
                   <p>Заказывали несколько ведер для утепления бани! Очень довольны сервисом и качеством герметика, Консультант рассказала все, помогла подобрать цвет. Рекомендую этот магазин!</p>
                 </div>
               </div>
@@ -298,13 +362,17 @@
         </div>
       </div>
     </div>
-    <div class="mb-100">
+    <div class="mb-100 delivery">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 d-flex align-items-center">
-            <img src="/img/photo-5.jpg" alt="">
+            <div class="ellipse">
+              <div class="delivery__img bg" style="background-image: url(../img/photo-5.jpg);"></div>
+              <div class="ellipse__item"></div>
+              <div class="ellipse__item ellipse__item--2"></div>
+            </div>
           </div>
-          <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <div class="col-lg-6 d-flex flex-column justify-content-center pl-lg-5">
             <h2 class="fw-700 mb-4">Доставим в ваш город</h2>
             <p class="fs-20">Доставляем по всей России и странам СНГ. Отправляем выбранной вами транспортной компанией.</p>
           </div>
@@ -340,7 +408,7 @@
                           <use xlink:href="img/sprite/sprite.svg#icon-minus"></use>
                         </svg>
                       </button>
-                      <input class="js-number" type="text" value="1" name="quantity-input-7" id="quantity-input-7">
+                      <input class="js-number" type="text" value="1" name="quantity-input-1" id="quantity-input-1">
                       <button class="btn quantity__btn js-increase ml-1" type="button" aria-Label="Увеличить количество">
                         <svg width="12" height="12">
                           <use xlink:href="img/sprite/sprite.svg#icon-plus-2"></use>
@@ -384,7 +452,7 @@
                           <use xlink:href="img/sprite/sprite.svg#icon-minus"></use>
                         </svg>
                       </button>
-                      <input class="js-number" type="text" value="1" name="quantity-input-7" id="quantity-input-7">
+                      <input class="js-number" type="text" value="1" name="quantity-input-2" id="quantity-input-2">
                       <button class="btn quantity__btn js-increase ml-1" type="button" aria-Label="Увеличить количество">
                         <svg width="12" height="12">
                           <use xlink:href="img/sprite/sprite.svg#icon-plus-2"></use>
@@ -428,7 +496,7 @@
                           <use xlink:href="img/sprite/sprite.svg#icon-minus"></use>
                         </svg>
                       </button>
-                      <input class="js-number" type="text" value="1" name="quantity-input-7" id="quantity-input-7">
+                      <input class="js-number" type="text" value="1" name="quantity-input-3" id="quantity-input-3">
                       <button class="btn quantity__btn js-increase ml-1" type="button" aria-Label="Увеличить количество">
                         <svg width="12" height="12">
                           <use xlink:href="img/sprite/sprite.svg#icon-plus-2"></use>
@@ -472,7 +540,7 @@
                           <use xlink:href="img/sprite/sprite.svg#icon-minus"></use>
                         </svg>
                       </button>
-                      <input class="js-number" type="text" value="1" name="quantity-input-7" id="quantity-input-7">
+                      <input class="js-number" type="text" value="1" name="quantity-input-4" id="quantity-input-4">
                       <button class="btn quantity__btn js-increase ml-1" type="button" aria-Label="Увеличить количество">
                         <svg width="12" height="12">
                           <use xlink:href="img/sprite/sprite.svg#icon-plus-2"></use>

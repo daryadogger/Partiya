@@ -14,11 +14,19 @@
     position: absolute;
     top: -35px;
     left: 20px;
+    transition: all 0.3s;
   }
 
   p {
     margin-bottom: 0;
-    color: $black;
+  }
+
+  @media (min-width: $media-tb) {
+    &:hover {
+      img {
+        transform: translateY(-4px);
+      }
+    }
   }
 }
 
@@ -41,6 +49,21 @@
     align-items: center;
     text-align: center;
   }
+
+  .name {
+    font-size: 17px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    color: #FFAD0E;
+
+    &+p {
+      font-size: 15px;
+      line-height: 1.4;
+    }
+  }
+
 }
 
 .card--good {

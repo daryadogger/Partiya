@@ -1,0 +1,21 @@
+.ellipse {
+  position: relative;
+  margin: 0 auto;
+
+
+  &__item {
+    position: absolute;
+    left: 69px;
+    top: -12px;
+    width: 500px;
+    height: 500px;
+    background: url("../img/ellipse.svg") 50% 50% no-repeat;
+    background-size: contain;
+    
+    &--2 {
+      left: 73px;
+      bottom: -8px;
+      top: auto;
+    }
+  }
+}

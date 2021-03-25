@@ -10137,6 +10137,9 @@ button, input, optgroup, select, textarea {
   background: url("../img/bg-wood.jpg") 50% 50% no-repeat;
   background-size: cover; }
 
+.bg-orange {
+  background-color: #F99F4D; }
+
 .btn {
   display: inline-block;
   padding: 0;
@@ -10521,7 +10524,9 @@ small {
     margin-bottom: 0.3rem; }
 
 .promo {
-  min-height: 500px;
+  display: -webkit-box;
+  display: flex;
+  min-height: 560px;
   border-radius: 15px 15px 0 0;
   background: #F99F4D url("../img/promo.jpg") 100% 50% no-repeat;
   background-size: contain; }
@@ -10551,6 +10556,21 @@ small {
             animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
             animation-timing-function: linear; }
+  @media (max-width: 1399px) {
+    .animated-item {
+      right: -50px;
+      width: 160px;
+      height: 160px; } }
+  @media (max-width: 1299px) {
+    .animated-item {
+      right: 0;
+      width: 150px;
+      height: 150px; } }
+  @media (max-width: 1199px) {
+    .animated-item {
+      right: 15px;
+      width: 130px;
+      height: 130px; } }
 
 @-webkit-keyframes rotation {
   from {
@@ -10568,6 +10588,45 @@ small {
     -webkit-transform: rotate(359deg);
             transform: rotate(359deg); } }
 
+.promo__col {
+  border-radius: 15px 0 0 0; }
+  .promo__col--orange {
+    position: relative;
+    background-color: #F99F4D; }
+    .promo__col--orange::before {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 560px solid #F99F4D;
+      border-right: 250px solid transparent;
+      right: -249px;
+      top: 0; }
+    .promo__col--orange p {
+      max-width: 400px; }
+
+.promo__img {
+  position: absolute;
+  left: 57%;
+  bottom: 5px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: 465px;
+  height: 390px; }
+  .promo__img .promo__good {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 350px;
+    height: 390px;
+    z-index: 2; }
+    .promo__img .promo__good--sm {
+      width: 225px;
+      height: 230px;
+      left: auto;
+      right: -23px;
+      z-index: 1; }
+
 .card {
   width: 100%;
   border: none;
@@ -10582,10 +10641,15 @@ small {
   .card--advantages img {
     position: absolute;
     top: -35px;
-    left: 20px; }
+    left: 20px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
   .card--advantages p {
-    margin-bottom: 0;
-    color: #000000; }
+    margin-bottom: 0; }
+  @media (min-width: 767px) {
+    .card--advantages:hover img {
+      -webkit-transform: translateY(-4px);
+              transform: translateY(-4px); } }
 
 .card--review {
   max-width: 360px;
@@ -10609,6 +10673,14 @@ small {
     -webkit-box-align: center;
             align-items: center;
     text-align: center; }
+  .card--review .name {
+    font-size: 17px; }
+  .card--review .subtitle {
+    font-size: 14px;
+    color: #FFAD0E; }
+    .card--review .subtitle + p {
+      font-size: 15px;
+      line-height: 1.4; }
 
 .card--good .card__main {
   display: -webkit-box;
@@ -10828,11 +10900,12 @@ small {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(236, 241, 247, 0.7);
   background-color: #FF6915;
   color: #ffffff;
   -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  -webkit-box-shadow: 0 3px 15px rgba(94, 94, 94, 0.3);
+          box-shadow: 0 3px 15px rgba(94, 94, 94, 0.3); }
   .swiper-button-next svg,
   .swiper-button-prev svg {
     -webkit-transition: -webkit-transform 0.3s;
@@ -10859,11 +10932,6 @@ small {
 .swiper-button-next svg {
   -webkit-transform: rotate(180deg) translateX(-2px);
           transform: rotate(180deg) translateX(-2px); }
-
-.swiper-button-next,
-.swiper-button-prev {
-  -webkit-box-shadow: 0 3px 15px rgba(94, 94, 94, 0.3);
-          box-shadow: 0 3px 15px rgba(94, 94, 94, 0.3); }
 
 .sertificates-slider,
 .reviews-slider {
@@ -10903,6 +10971,48 @@ small {
     -webkit-box-shadow: 2px 2px 15px rgba(23, 23, 23, 0.1);
             box-shadow: 2px 2px 15px rgba(23, 23, 23, 0.1);
     border-radius: 12px; }
+
+.advantages-slider {
+  width: 545px;
+  height: 545px;
+  border-radius: 50%;
+  background-color: #F99F4D; }
+  .advantages-slider .swiper-slide {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center; }
+    .advantages-slider .swiper-slide img {
+      max-width: 380px;
+      max-height: 410px; }
+  .advantages-slider .swiper-button-prev {
+    left: 30px;
+    right: auto; }
+  .advantages-slider .swiper-button-next {
+    left: auto;
+    right: 30px; }
+  .advantages-slider .swiper-button-next,
+  .advantages-slider .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    background-color: #F99F4D;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  @media (min-width: 767px) {
+    .advantages-slider .swiper-button-next:hover,
+    .advantages-slider .swiper-button-prev:hover {
+      background-color: #FF6915;
+      color: #ffffff;
+      -webkit-box-shadow: 0 3px 15px rgba(94, 94, 94, 0.3);
+              box-shadow: 0 3px 15px rgba(94, 94, 94, 0.3); }
+    .advantages-slider .swiper-button-next:hover svg {
+      -webkit-transform: rotate(180deg) translateX(-3px);
+              transform: rotate(180deg) translateX(-3px); }
+    .advantages-slider .swiper-button-prev:hover svg {
+      -webkit-transform: translateX(-3px);
+              transform: translateX(-3px); } }
 
 .nav .accordion__label {
   -webkit-box-pack: start;
@@ -10983,7 +11093,7 @@ small {
   border-radius: 20px;
   padding: 0 3rem; }
 
-.colors-block {
+.colors-block__list {
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
@@ -11013,6 +11123,46 @@ small {
   .colors-block__item.active {
     color: #ffffff;
     background-color: #FF6915; }
+
+.colors-block__img {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  width: 520px;
+  height: 520px; }
+  .colors-block__img p {
+    position: absolute;
+    left: 50%;
+    bottom: 80px;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    font-weight: 600;
+    font-size: 48px;
+    color: #ffffff; }
+
+.ellipse {
+  position: relative;
+  margin: 0 auto; }
+  .ellipse__item {
+    position: absolute;
+    left: 69px;
+    top: -12px;
+    width: 500px;
+    height: 500px;
+    background: url("../img/ellipse.svg") 50% 50% no-repeat;
+    background-size: contain; }
+    .ellipse__item--2 {
+      left: 73px;
+      bottom: -8px;
+      top: auto; }
+
+.delivery__img {
+  position: relative;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  z-index: 1; }
 
 .quantity input {
   width: 45px;

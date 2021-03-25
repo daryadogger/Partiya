@@ -23,10 +23,10 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(#ECF1F7, 0.7);
   background-color: $orange;
   color: $white;
   transition: all 0.3s;
+  box-shadow: 0 3px 15px rgba(#5E5E5E, 0.3);
 
   svg {
     transition: transform 0.3s;
@@ -55,11 +55,6 @@
 
 .swiper-button-next svg {
   transform: rotate(180deg) translateX(-2px);
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  box-shadow: 0 3px 15px rgba(#5E5E5E, 0.3);
 }
 
 .sertificates-slider,
@@ -107,6 +102,60 @@
     .card {
       box-shadow: 2px 2px 15px rgba(23, 23, 23, 0.1);
       border-radius: 12px;
+    }
+  }
+}
+
+
+.advantages-slider {
+  width: 545px;
+  height: 545px;
+  border-radius: 50%;
+  background-color: $orange-2;
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 380px;
+      max-height: 410px;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 30px;
+    right: auto;
+  }
+
+  .swiper-button-next {
+    left: auto;
+    right: 30px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    background-color: $orange-2;
+    box-shadow: none;
+  }
+
+  @media (min-width: $media-tb) {
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      background-color: $orange;
+      color: $white;
+      box-shadow: 0 3px 15px rgba(#5E5E5E, 0.3);
+    }
+
+    .swiper-button-next:hover svg {
+      transform: rotate(180deg) translateX(-3px);
+    }
+
+    .swiper-button-prev:hover svg {
+      transform: translateX(-3px);
     }
   }
 }

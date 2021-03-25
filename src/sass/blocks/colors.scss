@@ -1,4 +1,4 @@
-.colors-block {
+.colors-block__list {
   display: flex;
   flex-wrap: wrap;
   margin-right: -30px;
@@ -28,5 +28,24 @@
   &.active {
     color: $white;
     background-color: $orange;
+  }
+}
+
+.colors-block__img {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  width: 520px;
+  height: 520px;
+
+  p {
+    position: absolute;
+    left: 50%;
+    bottom: 80px;
+    transform: translate(-50%);
+    font-weight: 600;
+    font-size: 48px;
+    color: $white;
   }
 }
