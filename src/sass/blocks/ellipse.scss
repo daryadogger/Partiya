@@ -1,3 +1,21 @@
+@keyframes rotation {
+  0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotationReverse {
+  0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+      transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
 .ellipse {
   position: relative;
   margin: 0 auto;
@@ -5,17 +23,24 @@
 
   &__item {
     position: absolute;
-    left: 69px;
-    top: -12px;
-    width: 500px;
-    height: 500px;
+    left: 50%;
+    top: 50%;
+    width: 120%;
+    height: 120%;
     background: url("../img/ellipse.svg") 50% 50% no-repeat;
     background-size: contain;
-    
+
+    animation-name: rotation;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-size: contain;
+
     &--2 {
-      left: 73px;
-      bottom: -8px;
-      top: auto;
+      background: url("../img/ellipse-2.svg") 50% 50% no-repeat;
+
+      animation-name: rotationReverse;
+      animation-duration: 12s;
     }
   }
 }

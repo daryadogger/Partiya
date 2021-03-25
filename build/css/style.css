@@ -11141,21 +11141,56 @@ small {
     font-size: 48px;
     color: #ffffff; }
 
+@keyframes rotation {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg); } }
+
+@-webkit-keyframes rotationReverse {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(-360deg);
+            transform: translate(-50%, -50%) rotate(-360deg); } }
+
+@keyframes rotationReverse {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(-360deg);
+            transform: translate(-50%, -50%) rotate(-360deg); } }
+
 .ellipse {
   position: relative;
   margin: 0 auto; }
   .ellipse__item {
     position: absolute;
-    left: 69px;
-    top: -12px;
-    width: 500px;
-    height: 500px;
+    left: 50%;
+    top: 50%;
+    width: 120%;
+    height: 120%;
     background: url("../img/ellipse.svg") 50% 50% no-repeat;
+    background-size: contain;
+    -webkit-animation-name: rotation;
+            animation-name: rotation;
+    -webkit-animation-duration: 11s;
+            animation-duration: 11s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
     background-size: contain; }
     .ellipse__item--2 {
-      left: 73px;
-      bottom: -8px;
-      top: auto; }
+      background: url("../img/ellipse-2.svg") 50% 50% no-repeat;
+      -webkit-animation-name: rotationReverse;
+              animation-name: rotationReverse;
+      -webkit-animation-duration: 12s;
+              animation-duration: 12s; }
 
 .delivery__img {
   position: relative;
