@@ -9,6 +9,7 @@ import number from './number';
 import btnUp from './btn-up';
 import accordion from './accordion';
 import goodQuantity from './good-quantity';
+import colorsSelect from './colors-select';
 
 class App {
   static init() {
@@ -23,6 +24,7 @@ class App {
     btnUp();
     accordion();
     goodQuantity();
+    colorsSelect();
   }
 }
 

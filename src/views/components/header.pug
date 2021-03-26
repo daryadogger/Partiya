@@ -5,7 +5,7 @@ mixin header(data)
         a.link.logo.d-block.mr-3(href="#")
           img(src="/img/logo.svg", alt="Логотип ГК Партия" width="279" height="100")
 
-        .socials.d-flex.mr-3
+        .socials.d-none.d-lg-flex.mr-3
           a.link.link--orange.d-block(href="#")
             svg.mr-4(width='35' height='35')
               use(xlink:href="img/sprite/sprite.svg#icon-insta")
@@ -21,6 +21,10 @@ mixin header(data)
 
         a.btn.btn--border(href="#") Заказать в 1 клик
 
+        a.link.ml-auto.mb-2.basket(href="#")
+          svg(width='23' height='23')
+            use(xlink:href="img/sprite/sprite.svg#icon-basket")
+          .goods-number 0
 
         button.burger.js-open-menu.d-lg-none(type="button" aria-label="Меню")
           span.burger__span.burger__span--1
@@ -47,6 +51,3 @@ mixin header(data)
           svg(width='23' height='23')
             use(xlink:href="img/sprite/sprite.svg#icon-basket")
           .goods-number 0
-
-
-  .js-height

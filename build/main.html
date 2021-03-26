@@ -25,7 +25,7 @@
         <a class="link logo d-block mr-3" href="#">
           <img src="/img/logo.svg" alt="Логотип ГК Партия" width="279" height="100" />
         </a>
-        <div class="socials d-flex mr-3">
+        <div class="socials d-none d-lg-flex mr-3">
           <a class="link link--orange d-block" href="#">
             <svg class="mr-4" width="35" height="35">
               <use xlink:href="img/sprite/sprite.svg#icon-insta"></use>
@@ -44,6 +44,12 @@
           <span>8-800-996-66-33</span>
         </a>
         <a class="btn btn--border" href="#">Заказать в 1 клик</a>
+        <a class="link ml-auto mb-2 basket" href="#">
+          <svg width="23" height="23">
+            <use xlink:href="img/sprite/sprite.svg#icon-basket"></use>
+          </svg>
+          <div class="goods-number">0</div>
+        </a>
         <button class="burger js-open-menu d-lg-none" type="button" aria-label="Меню">
           <span class="burger__span burger__span--1"></span>
           <span class="burger__span burger__span--2"></span>
@@ -82,7 +88,6 @@
       </div>
     </div>
   </header>
-  <div class="js-height"></div>
   <main>
     <div class="mb-100 promo">
       <div class="container">
@@ -210,6 +215,33 @@
       <div class="container">
         <h2 class="fw-700 mb-5 text-center">Так герметик выглядит на стенах</h2>
       </div>
+      <div class="swiper-container js-photos-slider photos-slider">
+        <ul class="list swiper-wrapper">
+          <li class="swiper-slide">
+            <div class="bg" style="background-image: url(../img/photo-2.jpg);"></div>
+          </li>
+          <li class="swiper-slide">
+            <div class="bg" style="background-image: url(../img/photo-3.jpg);"></div>
+          </li>
+          <li class="swiper-slide">
+            <div class="bg" style="background-image: url(../img/photo-2.jpg);"></div>
+          </li>
+          <li class="swiper-slide">
+            <div class="bg" style="background-image: url(../img/photo-3.jpg);"></div>
+          </li>
+        </ul>
+        <div class="swiper-button-prev">
+          <svg width="10" height="18">
+            <use xlink:href="img/sprite/sprite.svg#icon-arrow-small"></use>
+          </svg>
+        </div>
+        <div class="swiper-button-next">
+          <svg width="10" height="18">
+            <use xlink:href="img/sprite/sprite.svg#icon-arrow-small"></use>
+          </svg>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
     </div>
     <div class="mb-100 colors-block">
       <div class="container">
@@ -217,63 +249,89 @@
           <div class="col-md-6 d-flex flex-column">
             <h2 class="fw-700 mb-5">Подбор цвета</h2>
             <div class="colors-block__list">
-              <a class="link colors-block__item" href="#">
-                <img src="/img/icons/color-1.png" alt="">
+              <a class="link colors-block__item drop-animate" href="#" data-img="/img/photo-6.jpg">
+                <div class="drop-animate__container">
+                  <img class="drop-animate__img" src="/img/icons/color-1.png" alt="">
+                </div>
                 <p>Белый</p>
               </a>
-              <a class="link colors-block__item" href="#">
-                <img src="/img/icons/color-2.png" alt="">
+              <a class="link colors-block__item drop-animate" href="#" data-img="/img/photo-4.jpg">
+                <div class="drop-animate__container">
+                  <img class="drop-animate__img" src="/img/icons/color-2.png" alt="">
+                </div>
                 <p>Бук</p>
               </a>
-              <a class="link colors-block__item" href="#">
-                <img src="/img/icons/color-3.png" alt="">
+              <a class="link colors-block__item drop-animate" href="#" data-img="/img/photo-4.jpg">
+                <div class="drop-animate__container">
+                  <img class="drop-animate__img" src="/img/icons/color-3.png" alt="">
+                </div>
                 <p>Лиственница</p>
               </a>
-              <a class="link colors-block__item" href="#">
-                <img src="/img/icons/color-4.png" alt="">
+              <a class="link colors-block__item drop-animate" href="#" data-img="/img/photo-6.jpg">
+                <div class="drop-animate__container">
+                  <img class="drop-animate__img" src="/img/icons/color-4.png" alt="">
+                </div>
                 <p>Золотая сосна</p>
               </a>
-              <a class="link colors-block__item active" href="#">
-                <img src="/img/icons/color-5.png" alt="">
+              <a class="link colors-block__item active drop-animate" href="#" data-img="/img/photo-4.jpg">
+                <div class="drop-animate__container">
+                  <img class="drop-animate__img" src="/img/icons/color-5.png" alt="">
+                </div>
                 <p>Орех</p>
               </a>
-              <a class="link colors-block__item" href="#">
-                <img src="/img/icons/color-6.png" alt="">
+              <a class="link colors-block__item drop-animate" href="#" data-img="/img/photo-6.jpg">
+                <div class="drop-animate__container">
+                  <img class="drop-animate__img" src="/img/icons/color-6.png" alt="">
+                </div>
                 <p>Орегон</p>
               </a>
-              <a class="link colors-block__item" href="#">
-                <img src="/img/icons/color-7.png" alt="">
+              <a class="link colors-block__item drop-animate" href="#" data-img="/img/photo-6.jpg">
+                <div class="drop-animate__container">
+                  <img class="drop-animate__img" src="/img/icons/color-7.png" alt="">
+                </div>
                 <p>Сосна</p>
               </a>
-              <a class="link colors-block__item" href="#">
-                <img src="/img/icons/color-8.png" alt="">
+              <a class="link colors-block__item drop-animate" href="#" data-img="/img/photo-4.jpg">
+                <div class="drop-animate__container">
+                  <img class="drop-animate__img" src="/img/icons/color-8.png" alt="">
+                </div>
                 <p>Медовый</p>
               </a>
-              <a class="link colors-block__item" href="#">
-                <img src="/img/icons/color-9.png" alt="">
+              <a class="link colors-block__item drop-animate" href="#" data-img="/img/photo-4.jpg">
+                <div class="drop-animate__container">
+                  <img class="drop-animate__img" src="/img/icons/color-9.png" alt="">
+                </div>
                 <p>Палисандр</p>
               </a>
-              <a class="link colors-block__item" href="#">
-                <img src="/img/icons/color-10.png" alt="">
+              <a class="link colors-block__item drop-animate" href="#" data-img="/img/photo-6.jpg">
+                <div class="drop-animate__container">
+                  <img class="drop-animate__img" src="/img/icons/color-10.png" alt="">
+                </div>
                 <p>Дуб</p>
               </a>
-              <a class="link colors-block__item" href="#">
-                <img src="/img/icons/color-11.png" alt="">
+              <a class="link colors-block__item drop-animate" href="#" data-img="/img/photo-4.jpg">
+                <div class="drop-animate__container">
+                  <img class="drop-animate__img" src="/img/icons/color-11.png" alt="">
+                </div>
                 <p>Тик</p>
               </a>
-              <a class="link colors-block__item" href="#">
-                <img src="/img/icons/color-12.png" alt="">
+              <a class="link colors-block__item drop-animate" href="#" data-img="/img/photo-3.jpg">
+                <div class="drop-animate__container">
+                  <img class="drop-animate__img" src="/img/icons/color-12.png" alt="">
+                </div>
                 <p>Венге</p>
               </a>
-              <a class="link colors-block__item" href="#">
-                <img src="/img/icons/color-13.png" alt="">
+              <a class="link colors-block__item drop-animate" href="#" data-img="/img/photo-5.jpg">
+                <div class="drop-animate__container">
+                  <img class="drop-animate__img" src="/img/icons/color-13.png" alt="">
+                </div>
                 <p>Серый</p>
               </a>
             </div>
           </div>
           <div class="col-md-6 d-flex align-items-center">
             <div class="ellipse">
-              <div class="colors-block__img">
+              <div class="colors-block__info">
                 <img src="/img/photo-6.jpg" alt="">
                 <p>Орех</p>
               </div>
@@ -374,7 +432,16 @@
           </div>
           <div class="col-lg-6 d-flex flex-column justify-content-center pl-lg-5">
             <h2 class="fw-700 mb-4">Доставим в ваш город</h2>
-            <p class="fs-20">Доставляем по всей России и странам СНГ. Отправляем выбранной вами транспортной компанией.</p>
+            <p class="fs-20 mb-5">Доставляем по всей России и странам СНГ. Отправляем выбранной вами транспортной компанией.</p>
+            <div class="d-flex align-items-center">
+              <img src="/img/icons/car.svg" alt="">
+              <div class="d-block ml-3">
+                <p class="fs-18 mb-1">Стоимость доставки в любой регион —<span class="color-orange pl-2 fw-700">300&nbsp;₽</span>
+                </p>
+                <p class="fs-18 mb-0">При заказе от 15 кг —<span class="color-orange pl-2">доставим&nbsp;бесплатно</span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

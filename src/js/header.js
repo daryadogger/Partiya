@@ -24,9 +24,9 @@ const headerScroll = () => {
     //Добавляет отступ на страницах для фиксированного хедера
     function checkHeaderHeight() {
       const value = $header.outerHeight();
-      const height = $(".js-height");
+      const main = $("main");
 
-      height.css("height", value);
+      main.css("padding-top", value);
     }
     checkHeaderHeight();
 

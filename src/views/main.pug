@@ -113,6 +113,29 @@ block main
       .container
         h2.fw-700.mb-5.text-center Так герметик выглядит на стенах
 
+      .swiper-container.js-photos-slider.photos-slider
+        ul.list.swiper-wrapper
+          li.swiper-slide
+            .bg(style="background-image: url(../img/photo-2.jpg);")
+
+          li.swiper-slide
+            .bg(style="background-image: url(../img/photo-3.jpg);")
+
+          li.swiper-slide
+            .bg(style="background-image: url(../img/photo-2.jpg);")
+
+          li.swiper-slide
+            .bg(style="background-image: url(../img/photo-3.jpg);")
+
+        .swiper-button-prev
+          svg(width="10" height="18")
+            use(xlink:href="img/sprite/sprite.svg#icon-arrow-small")
+        .swiper-button-next
+          svg(width="10" height="18")
+            use(xlink:href="img/sprite/sprite.svg#icon-arrow-small")
+
+        .swiper-pagination
+
     .mb-100.colors-block
       .container
         .row
@@ -120,61 +143,74 @@ block main
             h2.fw-700.mb-5 Подбор цвета
 
             .colors-block__list
-              a.link.colors-block__item(href="#")
-                img(src="/img/icons/color-1.png", alt="")
+              a.link.colors-block__item.drop-animate(href="#" data-img="/img/photo-6.jpg")
+                .drop-animate__container
+                  img.drop-animate__img(src="/img/icons/color-1.png", alt="")
                 p Белый
 
-              a.link.colors-block__item(href="#")
-                img(src="/img/icons/color-2.png", alt="")
+              a.link.colors-block__item.drop-animate(href="#" data-img="/img/photo-4.jpg")
+                .drop-animate__container
+                  img.drop-animate__img(src="/img/icons/color-2.png", alt="")
                 p Бук
 
-              a.link.colors-block__item(href="#")
-                img(src="/img/icons/color-3.png", alt="")
+              a.link.colors-block__item.drop-animate(href="#" data-img="/img/photo-4.jpg")
+                .drop-animate__container
+                  img.drop-animate__img(src="/img/icons/color-3.png", alt="")
                 p Лиственница
 
-              a.link.colors-block__item(href="#")
-                img(src="/img/icons/color-4.png", alt="")
+              a.link.colors-block__item.drop-animate(href="#" data-img="/img/photo-6.jpg")
+                .drop-animate__container
+                  img.drop-animate__img(src="/img/icons/color-4.png", alt="")
                 p Золотая сосна
 
-              a.link.colors-block__item.active(href="#")
-                img(src="/img/icons/color-5.png", alt="")
+              a.link.colors-block__item.active.drop-animate(href="#" data-img="/img/photo-4.jpg")
+                .drop-animate__container
+                  img.drop-animate__img(src="/img/icons/color-5.png", alt="")
                 p Орех
 
-              a.link.colors-block__item(href="#")
-                img(src="/img/icons/color-6.png", alt="")
+              a.link.colors-block__item.drop-animate(href="#" data-img="/img/photo-6.jpg")
+                .drop-animate__container
+                  img.drop-animate__img(src="/img/icons/color-6.png", alt="")
                 p Орегон
 
-              a.link.colors-block__item(href="#")
-                img(src="/img/icons/color-7.png", alt="")
+              a.link.colors-block__item.drop-animate(href="#" data-img="/img/photo-6.jpg")
+                .drop-animate__container
+                  img.drop-animate__img(src="/img/icons/color-7.png", alt="")
                 p Сосна
 
-              a.link.colors-block__item(href="#")
-                img(src="/img/icons/color-8.png", alt="")
+              a.link.colors-block__item.drop-animate(href="#" data-img="/img/photo-4.jpg")
+                .drop-animate__container
+                  img.drop-animate__img(src="/img/icons/color-8.png", alt="")
                 p Медовый
 
-              a.link.colors-block__item(href="#")
-                img(src="/img/icons/color-9.png", alt="")
+              a.link.colors-block__item.drop-animate(href="#" data-img="/img/photo-4.jpg")
+                .drop-animate__container
+                  img.drop-animate__img(src="/img/icons/color-9.png", alt="")
                 p Палисандр
 
-              a.link.colors-block__item(href="#")
-                img(src="/img/icons/color-10.png", alt="")
+              a.link.colors-block__item.drop-animate(href="#" data-img="/img/photo-6.jpg")
+                .drop-animate__container
+                  img.drop-animate__img(src="/img/icons/color-10.png", alt="")
                 p Дуб
 
-              a.link.colors-block__item(href="#")
-                img(src="/img/icons/color-11.png", alt="")
+              a.link.colors-block__item.drop-animate(href="#" data-img="/img/photo-4.jpg")
+                .drop-animate__container
+                  img.drop-animate__img(src="/img/icons/color-11.png", alt="")
                 p Тик
 
-              a.link.colors-block__item(href="#")
-                img(src="/img/icons/color-12.png", alt="")
+              a.link.colors-block__item.drop-animate(href="#" data-img="/img/photo-3.jpg")
+                .drop-animate__container
+                  img.drop-animate__img(src="/img/icons/color-12.png", alt="")
                 p Венге
 
-              a.link.colors-block__item(href="#")
-                img(src="/img/icons/color-13.png", alt="")
+              a.link.colors-block__item.drop-animate(href="#" data-img="/img/photo-5.jpg")
+                .drop-animate__container
+                  img.drop-animate__img(src="/img/icons/color-13.png", alt="")
                 p Серый
 
           .col-md-6.d-flex.align-items-center
             .ellipse
-              .colors-block__img
+              .colors-block__info
                 img(src="/img/photo-6.jpg", alt="")
                 p Орех
 
@@ -259,7 +295,15 @@ block main
 
           .col-lg-6.d-flex.flex-column.justify-content-center.pl-lg-5
             h2.fw-700.mb-4 Доставим в ваш город
-            p.fs-20 Доставляем по всей России и странам СНГ. Отправляем выбранной вами транспортной компанией.
+            p.fs-20.mb-5 Доставляем по всей России и странам СНГ. Отправляем выбранной вами транспортной компанией.
+            .d-flex.align-items-center
+              img(src="/img/icons/car.svg", alt="")
+
+              .d-block.ml-3
+                p.fs-18.mb-1 Стоимость доставки в любой регион —
+                  span.color-orange.pl-2.fw-700 300&nbsp;₽
+                p.fs-18.mb-0 При заказе от 15 кг —
+                  span.color-orange.pl-2 доставим&nbsp;бесплатно
 
 
     .mb-100

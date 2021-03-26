@@ -17,6 +17,28 @@ const sliders = () => {
     });
   }
 
+  // Photos sertificates
+  const photos = document.querySelector(".js-photos-slider");
+
+  if (photos) {
+    const mySwiper = new Swiper(".js-photos-slider.swiper-container", {
+      direction: "horizontal",
+      slidesPerView: 2,
+      spaceBetween: 20,
+      speed: 400,
+      loop: true,
+      centeredSlides: true,
+      navigation: {
+        nextEl: ".js-photos-slider .swiper-button-next",
+        prevEl: ".js-photos-slider .swiper-button-prev",
+      },
+      pagination: {
+        el: '.js-photos-slider .swiper-pagination',
+        clickable: true,
+      },
+    });
+  }
+
 
   // Reviews sertificates
   const reviews = document.querySelector(".js-reviews-slider");

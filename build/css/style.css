@@ -10468,6 +10468,9 @@ small {
   -webkit-box-pack: justify;
           justify-content: space-between;
   margin-bottom: 2rem; }
+  @media (max-width: 991px) {
+    .header__top {
+      margin-bottom: 0; } }
 
 .header .nav li {
   margin-right: 3rem; }
@@ -10517,11 +10520,36 @@ small {
 
 .header.scroll {
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.2rem;
   -webkit-box-shadow: 2px 2px 15px rgba(23, 23, 23, 0.1);
           box-shadow: 2px 2px 15px rgba(23, 23, 23, 0.1); }
   .header.scroll .header__top {
     margin-bottom: 0.3rem; }
+  .header.scroll .logo img {
+    height: 55px; }
+  .header.scroll .basket {
+    width: 45px;
+    height: 45px; }
+  .header.scroll .tel {
+    font-size: 21px; }
+  .header.scroll .btn--border {
+    padding: 8px 25px; }
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg); } }
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg); } }
 
 .promo {
   display: -webkit-box;
@@ -10536,18 +10564,15 @@ small {
     padding: 19px 55px; }
 
 .animated-item {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
   position: absolute;
   right: -85px;
   top: 40px;
   width: 175px;
   height: 175px; }
   .animated-item img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
     -webkit-animation-name: rotation;
             animation-name: rotation;
     -webkit-animation-duration: 20s;
@@ -10571,22 +10596,6 @@ small {
       right: 15px;
       width: 130px;
       height: 130px; } }
-
-@-webkit-keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg); } }
-
-@keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg); } }
 
 .promo__col {
   border-radius: 15px 0 0 0; }
@@ -11014,6 +11023,44 @@ small {
       -webkit-transform: translateX(-3px);
               transform: translateX(-3px); } }
 
+.photos-slider .swiper-slide .bg {
+  position: relative;
+  height: 450px; }
+  .photos-slider .swiper-slide .bg::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.7);
+    -webkit-transition: opacity 0.7s;
+    transition: opacity 0.7s; }
+
+.photos-slider .swiper-slide.swiper-slide-active .bg::before {
+  opacity: 0; }
+
+.photos-slider {
+  padding-bottom: 40px; }
+  .photos-slider .swiper-button-next {
+    right: 26%;
+    left: auto; }
+  .photos-slider .swiper-button-prev {
+    right: auto;
+    left: 26%; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 0; }
+
+.swiper-pagination-bullet {
+  width: 11px;
+  height: 11px;
+  opacity: 0.15; }
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #FF6915;
+  opacity: 1; }
+
 .nav .accordion__label {
   -webkit-box-pack: start;
           justify-content: flex-start;
@@ -11124,22 +11171,98 @@ small {
     color: #ffffff;
     background-color: #FF6915; }
 
-.colors-block__img {
+.colors-block__info {
   position: relative;
   border-radius: 50%;
   overflow: hidden;
   z-index: 1;
   width: 520px;
   height: 520px; }
-  .colors-block__img p {
+  .colors-block__info p {
     position: absolute;
     left: 50%;
-    bottom: 80px;
+    bottom: 90px;
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
     font-weight: 600;
     font-size: 48px;
-    color: #ffffff; }
+    color: #ffffff;
+    white-space: pre; }
+  .colors-block__info img {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+
+.drop-animate__container {
+  position: relative;
+  width: 33px;
+  height: 43px;
+  flex-shrink: 0; }
+  .drop-animate__container img {
+    position: absolute; }
+  .drop-animate__container .drop-animate__img {
+    top: -6px;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    -webkit-transition: top 0.15s opacity 0.3s;
+    transition: top 0.15s opacity 0.3s; }
+
+@media (min-width: 767px) {
+  .drop-animate:hover .drop-animate__img {
+    -webkit-animation-name: down;
+            animation-name: down;
+    -webkit-animation-duration: 0.6s;
+            animation-duration: 0.6s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; } }
+
+@media (min-width: 767px) {
+  .drop-animate.active:hover .drop-animate__img {
+    -webkit-animation: none;
+            animation: none; } }
+
+@-webkit-keyframes down {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0px) translateX(-50%) scale(1);
+            transform: translateY(0px) translateX(-50%) scale(1); }
+  60% {
+    opacity: 0;
+    -webkit-transform: translateY(10px) translateX(-50%) scale(0.9);
+            transform: translateY(10px) translateX(-50%) scale(0.9); }
+  65% {
+    -webkit-transform: translateY(-4px) translateX(-50%) scale(1);
+            transform: translateY(-4px) translateX(-50%) scale(1); }
+  85% {
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateY(0px) translateX(-50%) scale(1);
+            transform: translateY(0px) translateX(-50%) scale(1); } }
+
+@keyframes down {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0px) translateX(-50%) scale(1);
+            transform: translateY(0px) translateX(-50%) scale(1); }
+  60% {
+    opacity: 0;
+    -webkit-transform: translateY(10px) translateX(-50%) scale(0.9);
+            transform: translateY(10px) translateX(-50%) scale(0.9); }
+  65% {
+    -webkit-transform: translateY(-4px) translateX(-50%) scale(1);
+            transform: translateY(-4px) translateX(-50%) scale(1); }
+  85% {
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateY(0px) translateX(-50%) scale(1);
+            transform: translateY(0px) translateX(-50%) scale(1); } }
 
 @keyframes rotation {
   0% {
