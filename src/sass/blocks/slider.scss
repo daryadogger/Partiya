@@ -94,14 +94,6 @@
   }
 }
 
-.reviews-slider {
-  padding: 120px 0 120px;
-
-  @media (max-width: $media-td) {
-    padding: 0;
-  }
-}
-
 .sertificates-slider .swiper-slide,
 .reviews-slider .swiper-slide {
   transition: transform .3s ease;

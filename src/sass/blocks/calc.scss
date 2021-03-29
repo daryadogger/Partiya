@@ -2,9 +2,17 @@
   position: absolute;
   left: 15px;
   top: 30px;
-  width: 775px;
+  width: 760px;
   z-index: 1;
   padding-top: 50px;
+
+  @media (max-width: 1150px) {
+    width: 670px;
+  }
+
+  @media (max-width: 1040px) {
+    width: 620px;
+  }
 
   @media (max-width: $media-td) {
     position: relative;

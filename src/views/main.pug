@@ -1,8 +1,8 @@
 extends layouts/layout
 include components/header
 include components/footer
+include components/menu
 //- include components/modal
-//- include components/menu
 
 block title
   | Главная страница
@@ -223,20 +223,20 @@ block main
         .container
           .row
             .col-sm-4.d-flex.mb-3
-              .card.card--advantages
+              .card.card--advantages.card--advantages-another
                 img(src="/img/icons/clock.svg", alt="icon" width="120" height="120")
                 p.fw-700.fs-20.mb-2.color-orange Один раз сделал и забыл
                 p.fs-18.fw-600.text-muted Наш герметик прослужит в два раза дольше обычного, и в 20 раз дольше конопатки.
 
             .col-sm-4.d-flex.mb-3
-              .card.card--advantages
+              .card.card--advantages.card--advantages-another
                 img(src="/img/icons/temp.svg", alt="icon" width="120" height="120")
                 p.fw-700.fs-20.mb-2.color-orange Для самых сложных условий
                 p.fs-18.fw-600.text-muted Сохраняет свойства при температуре от +80 до -60.
 
 
             .col-sm-4.d-flex.mb-3
-              .card.card--advantages
+              .card.card--advantages.card--advantages-another
                 img(src="/img/icons/snap.svg", alt="icon" width="120" height="120")
                 p.fw-700.fs-20.mb-2.color-orange Не требует спецподготовки
                 p.fs-18.fw-600.text-muted Прекрасно наносится даже на влажную поверхность. Наносится и в межсезонье до -10C.
@@ -248,7 +248,7 @@ block main
 
         .swiper-container.js-reviews-slider.reviews-slider
           ul.list.swiper-wrapper
-            li.swiper-slide
+            li.swiper-slide.p-3
               .card.card--review
                 .card__side.bg.mb-4(style="background-image: url(../img/review-1.jpg);")
 
@@ -257,7 +257,7 @@ block main
                   p.mb-2.subtitle Алтайский край
                   p Я покупала герметик в это магазине, чтобы утеплить свой загородный дом. Сделали заказа и нам перезвонила девушка, которая помогла точно определить колличество, которое будет расходовано. Мы остались довольны качеством самого герметика. Наносится он очень просто. Наносили герметик шпателем и использовали жгут для утепления швов, по технологии тёплый шов.
 
-            li.swiper-slide
+            li.swiper-slide.p-3
               .card.card--review
                 .card__side.bg.mb-4(style="background-image: url(../img/review-2.jpg);")
 
@@ -266,7 +266,7 @@ block main
                   p.mb-2.subtitle Алтайский край
                   p Мы покупали герметик в 2015 году на одну постройку и в 2016 году на другую. Обе постройки на даче большие - гостевой дом и баня. Герметик имеет огромный опыт в утеплении и мы для себя его переняли. Наносили все сами с местными ребятами по видео инструкциям с ютуба.
 
-            li.swiper-slide
+            li.swiper-slide.p-3
               .card.card--review
                 .card__side.bg.mb-4(style="background-image: url(../img/review-3.jpg);")
 
@@ -313,21 +313,21 @@ block main
       .bg-wood.pt-5.pb-5
         .container
           .row
-            .col-md-6.mb-4.d-flex
+            .col-sm-6.mb-4.d-flex
               .card.card--good.p-4
-                .card__main.mb-4
+                .card__main.mb-2.mb-lg-4
                   .card__img(style="background-image: url(../img/good-4.png);")
 
                   .card__info
                     .d-flex.align-items-end.mb-4
                       span.fs-24.mr-3.lh-1.fw-600 Картридж
-                      span 0,31 л
+                      span.flex-shrink 0,31 л
 
                     .d-flex.align-items-end.mb-4
                       .price.mr-3
                         span.mr-1 226
                         span ₽
-                      span.text-muted.fs-12.fw-600 990 руб\л
+                      span.color-light-grey.fs-12.fw-600 990 руб\л
 
                     .d-flex.quantity.js-quantity.align-items-center.mb-3
                       button.btn.quantity__btn.js-decrease.mr-1(type="button" aria-Label="Уменьшить количество")
@@ -340,10 +340,10 @@ block main
                         svg(width="12" height="12")
                           use(xlink:href="img/sprite/sprite.svg#icon-plus-2")
 
-                    p.text-muted.fs-14 Цвет герметика указывается при оформлении заказа
+                    p.color-light-grey.fs-14 Цвет герметика указывается при оформлении заказа
 
                 .card__side
-                  a.btn.js-ripple.btn--orange.mr-3(href="#")
+                  a.btn.js-ripple.btn--orange.mr-lg-3(href="#")
                     .btn__content Добавить к заказу
 
                   .price
@@ -352,21 +352,21 @@ block main
                     span ₽
 
 
-            .col-md-6.mb-4.d-flex
+            .col-sm-6.mb-4.d-flex
               .card.card--good.p-4
-                .card__main.mb-4
+                .card__main.mb-2.mb-lg-4
                   .card__img(style="background-image: url(../img/good-2.png);")
 
                   .card__info
                     .d-flex.align-items-end.mb-4
                       span.fs-24.mr-3.lh-1.fw-600 Фолиевая туба
-                      span 0,5 л
+                      span.flex-shrink 0,5 л
 
                     .d-flex.align-items-end.mb-4
                       .price.mr-3
                         span.mr-1 226
                         span ₽
-                      span.text-muted.fs-12.fw-600 990 руб\л
+                      span.color-light-grey.fs-12.fw-600 990 руб\л
 
                     .d-flex.quantity.js-quantity.align-items-center.mb-3
                       button.btn.quantity__btn.js-decrease.mr-1(type="button" aria-Label="Уменьшить количество")
@@ -379,10 +379,10 @@ block main
                         svg(width="12" height="12")
                           use(xlink:href="img/sprite/sprite.svg#icon-plus-2")
 
-                    p.text-muted.fs-14 Цвет герметика указывается при оформлении заказа
+                    p.color-light-grey.fs-14 Цвет герметика указывается при оформлении заказа
 
                 .card__side
-                  a.btn.js-ripple.btn--orange.mr-3(href="#")
+                  a.btn.js-ripple.btn--orange.mr-lg-3(href="#")
                     .btn__content Добавить к заказу
 
                   .price
@@ -391,21 +391,21 @@ block main
                     span ₽
 
 
-            .col-md-6.mb-4.d-flex
+            .col-sm-6.mb-4.d-flex
               .card.card--good.p-4
-                .card__main.mb-4
+                .card__main.mb-2.mb-lg-4
                   .card__img(style="background-image: url(../img/good-3.png);")
 
                   .card__info
                     .d-flex.align-items-end.mb-4
                       span.fs-24.mr-3.lh-1.fw-600 Ведро
-                      span 5 л
+                      span.flex-shrink 5 л
 
                     .d-flex.align-items-end.mb-4
                       .price.mr-3
                         span.mr-1 226
                         span ₽
-                      span.text-muted.fs-12.fw-600 990 руб\л
+                      span.color-light-grey.fs-12.fw-600 990 руб\л
 
                     .d-flex.quantity.js-quantity.align-items-center.mb-3
                       button.btn.quantity__btn.js-decrease.mr-1(type="button" aria-Label="Уменьшить количество")
@@ -418,10 +418,10 @@ block main
                         svg(width="12" height="12")
                           use(xlink:href="img/sprite/sprite.svg#icon-plus-2")
 
-                    p.text-muted.fs-14 Цвет герметика указывается при оформлении заказа
+                    p.color-light-grey.fs-14 Цвет герметика указывается при оформлении заказа
 
                 .card__side
-                  a.btn.js-ripple.btn--orange.mr-3(href="#")
+                  a.btn.js-ripple.btn--orange.mr-lg-3(href="#")
                     .btn__content Добавить к заказу
 
                   .price
@@ -430,21 +430,21 @@ block main
                     span ₽
 
 
-            .col-md-6.mb-4.d-flex
+            .col-sm-6.mb-4.d-flex
               .card.card--good.p-4
-                .card__main.mb-4
+                .card__main.mb-2.mb-lg-4
                   .card__img(style="background-image: url(../img/good-3.png);")
 
                   .card__info
                     .d-flex.align-items-end.mb-4
                       span.fs-24.mr-3.lh-1.fw-600 Ведро
-                      span 10 л
+                      span.flex-shrink 10 л
 
                     .d-flex.align-items-end.mb-4
                       .price.mr-3
                         span.mr-1 226
                         span ₽
-                      span.text-muted.fs-12.fw-600 990 руб\л
+                      span.color-light-grey.fs-12.fw-600 990 руб\л
 
                     .d-flex.quantity.js-quantity.align-items-center.mb-3
                       button.btn.quantity__btn.js-decrease.mr-1(type="button" aria-Label="Уменьшить количество")
@@ -457,10 +457,10 @@ block main
                         svg(width="12" height="12")
                           use(xlink:href="img/sprite/sprite.svg#icon-plus-2")
 
-                    p.text-muted.fs-14 Цвет герметика указывается при оформлении заказа
+                    p.color-light-grey.fs-14 Цвет герметика указывается при оформлении заказа
 
                 .card__side
-                  a.btn.js-ripple.btn--orange.mr-3(href="#")
+                  a.btn.js-ripple.btn--orange.mr-lg-3(href="#")
                     .btn__content Добавить к заказу
 
                   .price
@@ -479,46 +479,55 @@ block main
         .row
           .col-lg-6.pt-5
 
-            .calc
+            .calc.js-calc
               .calc__side
-                a.link.active(href="#") Шаг 1
-                a.link(href="#") Шаг 2
-                a.link(href="#") Шаг 3
+                a.link.active(href="#" index="0") Шаг 1
+                a.link(href="#" index="1") Шаг 2
+                a.link(href="#" index="2") Шаг 3
 
               form(action="/" method="POST")
 
                 .calc__main
-                  p.fs-24.fw-600 Введите метраж под герметизацию
+                  .swiper-container
+                    ul.list.swiper-wrapper
+                      li.swiper-slide(index="0")
+                        p.fs-24.fw-600 Введите метраж под герметизацию
 
-                  .calc__input.mb-5
-                    input.js-number(type="text")
-                    span Погонных метров
+                        .calc__input.mb-5
+                          input.js-number(type="text")
+                          span Погонных метров
 
-                  p.fs-24.fw-600 Из чего сделан дом?
+                        p.fs-24.fw-600 Из чего сделан дом?
 
-                  .calc__radio
-                    label.radio
-                      input(type="radio" name="material" value="ocilindrovannoe-bervno" checked)
-                      span.radio__button
-                      span.color-black.fs-20 Оцилиндрованное бервно
+                        .calc__radio
+                          label.radio
+                            input(type="radio" name="material" value="ocilindrovannoe-bervno" checked)
+                            span.radio__button
+                            span.color-black.fs-20 Оцилиндрованное бервно
 
-                    label.radio
-                      input(type="radio" name="material" value="rublennoe-brevno")
-                      span.radio__button
-                      span.color-black.fs-20 Рубленное бревно
+                          label.radio
+                            input(type="radio" name="material" value="rublennoe-brevno")
+                            span.radio__button
+                            span.color-black.fs-20 Рубленное бревно
 
-                    label.radio
-                      input(type="radio" name="material" value="brus")
-                      span.radio__button
-                      span.color-black.fs-20 Брус
+                          label.radio
+                            input(type="radio" name="material" value="brus")
+                            span.radio__button
+                            span.color-black.fs-20 Брус
+
+                      li.swiper-slide(index="1")
+                        p step 2
+
+                      li.swiper-slide(index="2")
+                        p step 3
 
                   .d-flex.justify-content-end
-                    button.btn.btn--border.mr-4(type="button") Назад
-                    button.btn.js-ripple.btn--orange(type="button")
+                    button.btn.btn--border.mr-4.calc__btn.calc__btn--prev(type="button") Назад
+                    button.btn.js-ripple.btn--orange.calc__btn.calc__btn--next(type="button")
                       .btn__content Далее
 
           .col-lg-6.d-none.d-lg-block
-            .bg.h-500.border-radius(style="background-image: url(../img/photo-4.jpg);")
+            .bg.h-585.border-radius(style="background-image: url(../img/photo-4.jpg);")
 
     .mb-100
       .container
@@ -608,6 +617,6 @@ block footer
       use(xlink:href="img/sprite/sprite.svg#icon-arrow-small")
 
 block modal
+  +menu()
   //- +modal()
-  //- +menu()
 

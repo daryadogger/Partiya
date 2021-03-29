@@ -65,6 +65,9 @@ h5, .h5 {@include font-size(24px);}
 .color-orange {
   color: $orange;
 }
+.color-light-grey {
+  color: rgba($black, 0.5);
+}
 
 .text-muted {
   color: $grey !important;
@@ -105,4 +108,8 @@ small {
 
 .subtitle {
   opacity: 0.5;
+}
+
+.flex-shrink {
+  flex-shrink: 0;
 }

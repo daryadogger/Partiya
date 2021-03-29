@@ -11,6 +11,7 @@ import accordion from './accordion';
 import goodQuantity from './good-quantity';
 import colorsSelect from './colors-select';
 import footerForm from './footer-form';
+import calcSlider from './calculator';
 
 class App {
   static init() {
@@ -27,6 +28,7 @@ class App {
     goodQuantity();
     colorsSelect();
     footerForm();
+    calcSlider();
   }
 }
 
