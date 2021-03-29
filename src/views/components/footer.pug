@@ -2,29 +2,33 @@ mixin footer(data)
   footer.footer(class!=attributes.class)
     .container
       .row
-        .col-lg-6.footer__col.footer__col--color
+        .col-md-6.footer__col.footer__col--color
           .mb-4
-            .mb-5
-              p.fs-24.fw-700.color-white.mb-2 Оставьте заявку. Мы поможем расчитать колличество герметика
-              p.fs-12.fw-600.color-white С вами свяжуться в течении 5-7 минут
-
             form(action="/" method="POST")
-              label.fieldset.mb-2
-                span.fieldset__label Имя
-                input(type="text" name="name" autocomplete="off" required)
+              .row
+                .col-sm-6.col-md-12
+                  .mb-4.mb-md-5
+                    p.fs-24.fw-700.color-white.mb-2 Оставьте заявку. Мы поможем расчитать колличество герметика
+                    p.fs-12.fw-600.color-white С вами свяжуться в течении 5-7 минут
 
-              label.fieldset.mb-2
-                span.fieldset__label Телефон
-                input(type="text" name="tel" autocomplete="off" required)
+                .col-sm-6.col-md-12
+                    label.fieldset.mb-2
+                      span.fieldset__label Имя
+                      input(type="text" name="name" autocomplete="off" required)
 
-              button.btn.btn--orange.js-ripple.mt-4(type="submit")
-                span.btn__content Оставить заявку
+                    label.fieldset.mb-2
+                      span.fieldset__label Телефон
+                      input(type="text" name="tel" autocomplete="off" required)
+
+                .col-sm-12
+                    button.btn.btn--orange.js-ripple.mt-4(type="submit")
+                      span.btn__content Оставить заявку
 
           a.link.link--white.link--underlined.mt-auto(href="#")
             span.fs-14 Политика обработки персональных данных
 
-        .col-lg-6.footer__col
-          .mb-4
+        .col-md-6.footer__col
+          .mb-md-4
             a.link.logo.d-block.pb-4(href="#")
               img(src="/img/logo-2.svg", alt="Логотип ГК Партия" width="279" height="100")
 

@@ -37,6 +37,14 @@
 
 .h-500 {
   height: 500px;
+
+  @media (max-width: $media-td) {
+    height: 400px;
+  }
+
+  @media (max-width: $media-tb) {
+    height: 300px;
+  }
 }
 
 .h-350 {

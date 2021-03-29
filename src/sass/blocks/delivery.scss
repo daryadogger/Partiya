@@ -5,6 +5,16 @@
     height: 550px;
     border-radius: 50%;
     z-index: 1;
+
+    @media (max-width: $media-td) {
+      width: 325px;
+      height: 325px;
+    }
+
+    @media (max-width: $media-tb) {
+      width: 280px;
+      height: 280px;
+    }
   }
 }
 

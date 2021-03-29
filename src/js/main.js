@@ -10,6 +10,7 @@ import btnUp from './btn-up';
 import accordion from './accordion';
 import goodQuantity from './good-quantity';
 import colorsSelect from './colors-select';
+import footerForm from './footer-form';
 
 class App {
   static init() {
@@ -25,6 +26,7 @@ class App {
     accordion();
     goodQuantity();
     colorsSelect();
+    footerForm();
   }
 }
 

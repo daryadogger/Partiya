@@ -1,7 +1,7 @@
 const sliders = () => {
   const Swiper = window.Swiper;
 
-  // Adv sertificates
+  // Adv slider
   const advantages = document.querySelector(".js-advantages-slider");
 
   if (advantages) {
@@ -17,17 +17,24 @@ const sliders = () => {
     });
   }
 
-  // Photos sertificates
+  // Photos slider
   const photos = document.querySelector(".js-photos-slider");
 
   if (photos) {
     const mySwiper = new Swiper(".js-photos-slider.swiper-container", {
       direction: "horizontal",
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 20,
       speed: 400,
       loop: true,
-      centeredSlides: true,
+      centeredSlides: false,
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+          centeredSlides: true,
+        },
+      },
       navigation: {
         nextEl: ".js-photos-slider .swiper-button-next",
         prevEl: ".js-photos-slider .swiper-button-prev",
@@ -40,7 +47,7 @@ const sliders = () => {
   }
 
 
-  // Reviews sertificates
+  // Reviews slider
   const reviews = document.querySelector(".js-reviews-slider");
 
   if (reviews) {
@@ -52,17 +59,20 @@ const sliders = () => {
       loop: true,
       centeredSlides: true,
       breakpoints: {
-        500: {
+        680: {
           slidesPerView: 2,
           spaceBetween: 15,
+          centeredSlides: false,
         },
-        575: {
+        767: {
           slidesPerView: 3,
           spaceBetween: 15,
+          centeredSlides: true,
         },
         991: {
           slidesPerView: 3,
           spaceBetween: 120,
+          centeredSlides: true,
         },
       },
       navigation: {
@@ -72,7 +82,7 @@ const sliders = () => {
     });
   }
 
-  // Slider sertificates
+  // Sertificates slider
   const sertificates = document.querySelector(".js-sertificates-slider");
 
   if (sertificates) {
@@ -87,14 +97,16 @@ const sliders = () => {
         500: {
           slidesPerView: 2,
           spaceBetween: 15,
+          centeredSlides: false,
         },
-        575: {
+        680: {
           slidesPerView: 3,
           spaceBetween: 15,
         },
         991: {
           slidesPerView: 3,
           spaceBetween: 120,
+          centeredSlides: true,
         },
       },
       navigation: {

@@ -12,7 +12,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 1.2;
-    outline: none;
+    outline: none !important;
     transition: all 0.3s;
     box-shadow: none;
     border-radius: 5px;
@@ -25,6 +25,10 @@
     }
 
     &:focus {
+      background-color: $white;
+    }
+
+    &.has-value {
       background-color: $white;
     }
   }
@@ -43,4 +47,54 @@
   transition: all 0.5s;
   width: 107px;
   flex-shrink: 0;
+}
+
+.radio {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  input {
+    @include visually-hidden;
+  }
+
+  input:checked + .radio__button {
+    border-color: $orange;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: $media-tb) {
+    &:hover .radio__button {
+      border-color: $orange;
+    }
+  }
+}
+
+.radio__button {
+  position: relative;
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  border: 1px solid rgba(67, 66, 66, 0.3);
+  flex-shrink: 0;
+  margin-right: 0.8rem;
+  transition: all 0.3s;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: $orange;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0;
+  }
 }

@@ -68,10 +68,38 @@
   .swiper-button-prev {
     left: 28%;
   }
+
+  @media (max-width: $media-td) {
+    padding: 0;
+  }
+
+  @media (max-width: $media-td) {
+    .swiper-button-next {
+      right: 30%;
+    }
+
+    .swiper-button-prev {
+      left: 30%;
+    }
+  }
+
+  @media (max-width: $media-tb) {
+    .swiper-button-next {
+      right: 0;
+    }
+
+    .swiper-button-prev {
+      left: 0;
+    }
+  }
 }
 
 .reviews-slider {
   padding: 120px 0 120px;
+
+  @media (max-width: $media-td) {
+    padding: 0;
+  }
 }
 
 .sertificates-slider .swiper-slide,
@@ -82,6 +110,13 @@
 .sertificates-slider .swiper-slide {
   &.swiper-slide-active {
     transform: scale(1.35, 1.38);
+  }
+
+
+  @media (max-width: $media-td) {
+    &.swiper-slide-active {
+      transform: scale(1);
+    }
   }
 
   a {
@@ -104,8 +139,18 @@
       border-radius: 12px;
     }
   }
-}
 
+  @media (max-width: $media-td) {
+    .card {
+      box-shadow: 2px 2px 15px rgba(23, 23, 23, 0.1);
+      border-radius: 12px;
+    }
+
+    &.swiper-slide-active {
+      transform: scale(1);
+    }
+  }
+}
 
 .advantages-slider {
   width: 545px;
@@ -174,6 +219,18 @@
     background: rgba(255, 255, 255, 0.7);
     transition: opacity 0.7s;
   }
+
+  @media (max-width: $media-td) {
+    height: 400px;
+  }
+
+  @media (max-width: $media-tb) {
+    height: 350px;
+  }
+
+  @media (max-width: $media-sm) {
+    height: 300px;
+  }
 }
 
 .photos-slider .swiper-slide {
@@ -190,11 +247,19 @@
   .swiper-button-next {
     right: 26%;
     left: auto;
+
+    @media (max-width: $media-tb) {
+      right: 15px;
+    }
   }
 
   .swiper-button-prev {
     right: auto;
     left: 26%;
+
+    @media (max-width: $media-tb) {
+      left: 15px;
+    }
   }
 }
 

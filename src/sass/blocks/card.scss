@@ -28,6 +28,16 @@
       }
     }
   }
+
+  @media (max-width: $media-tb) {
+    .fs-20 {
+      font-size: 15px;
+    }
+
+    .fs-18 {
+      font-size: 15px;
+    }
+  }
 }
 
 .card--review {
@@ -64,6 +74,9 @@
     }
   }
 
+  @media (max-width: $media-tb) {
+    max-width: 100%;
+  }
 }
 
 .card--good {
@@ -108,3 +121,4 @@
     margin-right: 3rem;
   }
 }
+
