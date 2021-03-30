@@ -2,4 +2,63 @@
   background-color: $white;
   border-radius: 20px;
   padding: 0 3rem;
+
+  table {
+    width: 100%;
+  }
+
+  td {
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    font-size: 18px;
+    padding: 2rem 1rem;
+    vertical-align: middle;
+
+    &.green {
+      background-color: rgba(#74D49A, 0.1);
+    }
+  }
+
+  tr:first-of-type {
+    td {
+      border-top: none;
+      vertical-align: bottom;
+    }
+  }
+
+  .tl-left {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+    vertical-align: middle;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      margin-bottom: 15px;
+    }
+
+    span {
+      font-weight: 700;
+      color: $orange;
+      font-size: 18px;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      padding-bottom: 20px;
+    }
+  }
 }

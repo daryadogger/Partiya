@@ -156,19 +156,27 @@
     justify-content: center;
 
     img {
-      max-width: 380px;
-      max-height: 410px;
+      max-width: 67%;
+      max-height: 90%;
     }
   }
 
   .swiper-button-prev {
     left: 30px;
     right: auto;
+
+    @media (max-width: $media-td) {
+      left: 5px;
+    }
   }
 
   .swiper-button-next {
     left: auto;
     right: 30px;
+
+    @media (max-width: $media-td) {
+      right: 5px;
+    }
   }
 
   .swiper-button-next,
@@ -194,6 +202,31 @@
     .swiper-button-prev:hover svg {
       transform: translateX(-3px);
     }
+  }
+
+  @media (max-width: $media-md) {
+    width: 465px;
+    height: 465px;
+  }
+
+  @media (max-width: $media-td) {
+    width: 350px;
+    height: 350px;
+  }
+
+  @media (max-width: $media-tb) {
+    width: 380px;
+    height: 380px;
+  }
+
+  @media (max-width: $media-sm) {
+    width: 350px;
+    height: 350px;
+  }
+
+  @media (max-width: 424px) {
+    width: 280px;
+    height: 280px;
   }
 }
 

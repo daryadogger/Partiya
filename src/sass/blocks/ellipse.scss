@@ -22,22 +22,24 @@
 
 
   &__item {
-    // position: absolute;
-    // left: 50%;
-    // top: 50%;
-    // width: 120%;
-    // height: 120%;
-    // background: url("../img/ellipse.svg") 50% 50% no-repeat;
-    // background-size: contain;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120%;
+    height: 123%;
+    background: url("../img/ellipse.svg") 50% 50% no-repeat;
+    background-size: contain;
 
-    // animation-name: rotation;
-    // animation-duration: 11s;
-    // animation-iteration-count: infinite;
-    // animation-timing-function: linear;
-    // background-size: contain;
+    animation-name: rotation;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 
     &--2 {
       background: url("../img/ellipse-2.svg") 50% 50% no-repeat;
+      width: 107%;
+      height: 107%;
+      background-size: contain;
 
       animation-name: rotationReverse;
       animation-duration: 12s;

@@ -12,6 +12,7 @@ import goodQuantity from './good-quantity';
 import colorsSelect from './colors-select';
 import footerForm from './footer-form';
 import calcSlider from './calculator';
+import ankors from './ankors';
 
 class App {
   static init() {
@@ -29,6 +30,7 @@ class App {
     colorsSelect();
     footerForm();
     calcSlider();
+    ankors();
   }
 }
 
