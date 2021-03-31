@@ -21,7 +21,7 @@ mixin header(data)
 
         a.btn.btn--border.d-none.d-lg-block(href="#") Заказать в 1 клик
 
-        a.link.ml-auto.mb-2.basket.d-lg-none.mr-3(href="#")
+        a.link.ml-auto.mb-2.basket.d-lg-none.mr-3(href="#" js-popup-open="js-popup-open" data-src="#modal-basket")
           svg(width='23' height='23')
             use(xlink:href="img/sprite/sprite.svg#icon-basket")
           .goods-number 0
@@ -47,7 +47,7 @@ mixin header(data)
             li
               a.link.link--grey.js-ankor(href="#delivery" data-href="#delivery") Доставка
 
-        a.link.ml-auto.mb-2.basket(href="#")
+        a.link.ml-auto.mb-2.basket(href="#" js-popup-open="js-popup-open" data-src="#modal-basket")
           svg(width='23' height='23')
             use(xlink:href="img/sprite/sprite.svg#icon-basket")
           .goods-number 0

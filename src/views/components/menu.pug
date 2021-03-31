@@ -1,9 +1,27 @@
 mixin menu(data)
   .menu(class!=attributes.class)
     .container
-      nav.mb-3.nav
+      a.btn.btn--border.mb-4(href="#") Заказать в 1 клик
+      nav.mb-3.nav.pt-2
         ul.list.d-flex.flex-column.w-100
           li.mb-3
-            a.link.link--grey.d-block.fs-24(href="#") О компании
+            a.link.link--grey.d-block.fs-24.js-ankor(href="#advantages" data-href="#advantages") Преимущества
+          li.mb-3
+            a.link.link--grey.d-block.fs-24.js-ankor(href="#examples" data-href="#examples") Примеры применения
+          li.mb-3
+            a.link.link--grey.d-block.fs-24.js-ankor(href="#prices" data-href="#prices") Фасовки и цены
+          li.mb-3
+            a.link.link--grey.d-block.fs-24.js-ankor(href="#colors" data-href="#colors") Цвета
+          li.mb-3
+            a.link.link--grey.d-block.fs-24.js-ankor(href="#reviews" data-href="#reviews") Отзывы
+          li.mb-3
+            a.link.link--grey.d-block.fs-24.js-ankor(href="#delivery" data-href="#delivery") Доставка
 
-      a.btn.btn--border.js-ankor(href="#") Заказать в 1 клик
+      .socials.d-flex
+        a.link.link--orange.d-block(href="#")
+          svg.mr-4(width='35' height='35')
+            use(xlink:href="img/sprite/sprite.svg#icon-insta")
+
+        a.link.link--orange.d-block(href="#")
+          svg(width='35' height='35')
+            use(xlink:href="img/sprite/sprite.svg#icon-wp")

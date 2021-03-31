@@ -58,6 +58,20 @@
   }
 }
 
+.link--blue {
+  color: $blue;
+
+  &:active {
+    color: $orange;
+  }
+
+  @media (min-width: $media-tb) {
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
 .link--underlined {
   span {
     border-bottom: 1px solid;

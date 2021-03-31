@@ -15,9 +15,9 @@
   -webkit-overflow-scrolling: touch;
   transform: translate(-1000px);
   transition: transform 0.6s ease;
-  padding-top: 100px;
+  padding-top: 130px;
   padding-bottom: 50px;
-  background-color: $white;
+  background-color: #F7F7F7;
 
   &.is-show {
     transform: translate(0);
@@ -54,4 +54,8 @@
 .fancybox-stage ::-webkit-scrollbar-thumb {
   background-color: rgba(#98989b, 0.15);
   border-radius: 5px;
+}
+
+.menu .btn--border {
+  padding: 13px 35px;
 }
