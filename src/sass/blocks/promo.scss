@@ -15,11 +15,19 @@
   background-size: contain;
 
   .lg {
-    font-size: 90px;
+    @include font-size(90px);
   }
 
   .btn__content {
     padding: 19px 55px;
+  }
+
+  @media (max-width: $media-td) {
+    background-size: cover;
+
+    .btn__content {
+      padding: 16px 45px;
+    }
   }
 }
 
@@ -58,6 +66,15 @@
     height: 130px;
   }
 
+  @media (max-width: $media-tb) {
+    width: 110px;
+    height: 110px;
+  }
+
+  @media (max-width: $media-sm) {
+    display: none;
+  }
+
 }
 
 .promo__col {
@@ -81,6 +98,25 @@
     p {
       max-width: 400px;
     }
+
+    @media (max-width: $media-md) {
+      &::before {
+        border-right: 180px solid transparent;
+        right: -180px;
+      }
+    }
+
+    @media (max-width: $media-tb) {
+      border-radius: 15px 15px 0 0;
+
+      &::before {
+        border-top: 75px solid $orange-2;
+        border-right: 1000px solid transparent;
+        right: 0;
+        top: auto;
+        bottom: -74px;
+      }
+    }
   }
 }
 
@@ -98,15 +134,73 @@
     bottom: 0;
     width: 350px;
     height: 390px;
-    z-index: 2;
+    z-index: 1;
 
     &--sm {
       width: 225px;
       height: 230px;
       left: auto;
       right: -23px;
-      z-index: 1;
+      z-index: 2;
+    }
+
+    @media (max-width: $media-md) {
+      width: 300px;
+      height: 340px;
+      left: 25px;
+
+      &--sm {
+        width: 200px;
+        height: 205px;
+        right: 9px;
+        left: auto;
+      }
+    }
+
+    @media (max-width: $media-td) {
+      width: 290px;
+      height: 330px;
+      left: 120px;
+
+      &--sm {
+        width: 190px;
+        height: 195px;
+        right: -72px;
+        left: auto;
+      }
+    }
+
+    @media (max-width: $media-tb) {
+      width: 230px;
+      height: 270px;
+      left: 120px;
+
+      &--sm {
+        width: 175px;
+        height: 190px;
+        right: -5px;
+        left: auto;
+      }
+    }
+
+    @media (max-width: $media-sm) {
+      width: 200px;
+      height: 240px;
+      left: 58px;
+
+      &--sm {
+        width: 155px;
+        height: 170px;
+        right: 100px;
+        left: auto;
+      }
     }
   }
 
+}
+
+.promo .fs-20 {
+  @media (max-width: $media-tb) {
+    font-size: 18px;
+  }
 }

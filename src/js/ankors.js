@@ -24,26 +24,51 @@ const ankors = () => {
   // На кнопки вешаем обработчики событий
   links.each(function() {
     $(this).on("click", function(evt) {
-      evt.preventDefault();
+      // Нужно, чтобы меню закрывалось и страница скроллилась до секции
+      if ($(".menu").hasClass("is-show")) {
 
-      const hash = $(this).attr('data-href');
+        $(".menu").removeClass("is-show");
+        $('body').removeClass('is-menu-open').removeAttr('data-scroll');
+        checkHash();
 
-      if ($(hash).length) {
-          $('html, body').animate({
-              scrollTop: ($(hash).offset().top - 130),
-          }, 900, 'swing');
+      // Обычный скрипт скролла до необходимой секции в data атрибуте без перезагрузки страницы
+      } else {
+
+        evt.preventDefault();
+
+        var hash = $(this).attr('data-href');
+
+        if ($(hash).length) {
+            $('html, body').animate({
+                scrollTop: ($(hash).offset().top - 130),
+            }, 900, 'swing');
+        }
+
       }
     });
 
     $(this).on("focus", function(evt) {
-      evt.preventDefault();
+      // Нужно, чтобы меню закрывалось и страница скроллилась до секции
+      if ($(".menu").hasClass("is-show")) {
 
-      const hash = $(this).attr('data-href');
+        $(".menu").removeClass("is-show");
+        $(".js-open-menu").removeClass("is-show");
+        $('body').removeClass('is-menu-open').removeAttr('data-scroll');
+        checkHash();
 
-      if ($(hash).length) {
-        $('html, body').animate({
-            scrollTop: ($(hash).offset().top - 130),
-        }, 900, 'swing');
+      // Обычный скрипт скролла до необходимой секции в data атрибуте без перезагрузки страницы
+      } else {
+
+        evt.preventDefault();
+
+        var hash = $(this).attr('data-href');
+
+        if ($(hash).length) {
+            $('html, body').animate({
+                scrollTop: ($(hash).offset().top - 130),
+            }, 900, 'swing');
+        }
+
       }
     });
   });

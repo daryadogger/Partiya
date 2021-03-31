@@ -3,8 +3,37 @@
   border-radius: 20px;
   padding: 0 3rem;
 
+  @media (max-width: $media-td) {
+    padding: 0 2rem;
+  }
+
+  @media (max-width: $media-tb) {
+    padding: 0 1rem;
+  }
+
   table {
     width: 100%;
+  }
+
+  tr {
+    @media (max-width: $media-sm) {
+      &:first-of-type {
+        display: none;
+      }
+
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+      &:first-child {
+          border-top: 0;
+
+          td {
+              padding-top: 15px;
+          }
+      }
+    }
   }
 
   td {
@@ -15,8 +44,48 @@
     padding: 2rem 1rem;
     vertical-align: middle;
 
+    .mob {
+      display: none;
+    }
+
     &.green {
       background-color: rgba(#74D49A, 0.1);
+    }
+
+    @media (max-width: $media-md) {
+      padding: 1.5rem 1rem;
+      font-size: 17px;
+    }
+
+    @media (max-width: $media-td) {
+      padding: 1.2rem 1rem;
+      font-size: 16px;
+    }
+
+    @media (max-width: $media-tb) {
+      padding: 1rem 0.8rem;
+      font-size: 14px;
+    }
+
+    @media (max-width: $media-sm) {
+      display: flex;
+      align-items: center;
+      padding: 15px 0;
+      width: 100%;
+      border: none;
+
+      span {
+        margin: 0 auto;
+      }
+
+      .mob {
+        font-weight: 600;
+        color: $orange;
+        width: 57%;
+        display: inline-block;
+        text-align: left;
+        margin: 0;
+      }
     }
   }
 
@@ -32,6 +101,22 @@
     font-size: 18px;
     font-weight: 700;
     vertical-align: middle;
+
+    @media (max-width: $media-md) {
+      font-size: 17px;
+
+      br {
+        display: none;
+      }
+    }
+
+    @media (max-width: $media-td) {
+      font-size: 16px;
+    }
+
+    @media (max-width: $media-tb) {
+      font-size: 14px;
+    }
   }
 
   .top {
@@ -48,6 +133,18 @@
       font-weight: 700;
       color: $orange;
       font-size: 18px;
+
+      @media (max-width: $media-md) {
+        font-size: 17px;
+      }
+
+      @media (max-width: $media-td) {
+        font-size: 16px;
+      }
+
+      @media (max-width: $media-tb) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -59,6 +156,10 @@
 
     span {
       padding-bottom: 20px;
+    }
+
+    @media (max-width: $media-sm) {
+      margin: 0 auto;
     }
   }
 }
