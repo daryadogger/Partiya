@@ -10135,8 +10135,8 @@ button, input, optgroup, select, textarea {
 .mb-100 {
   margin-bottom: 100px; }
 
-.h-585 {
-  height: 585px; }
+.h-650 {
+  height: 650px; }
 
 .h-500 {
   height: 500px; }
@@ -10662,7 +10662,8 @@ small {
 @media (max-width: 991px) {
   .menu .tel {
     margin-bottom: 2rem !important;
-    font-size: 20px; } }
+    font-size: 20px;
+    margin-left: 0 !important; } }
 
 @media (max-width: 539px) {
   .menu .tel span {
@@ -10741,19 +10742,19 @@ small {
     .burger.is-show .burger__span {
       background-color: #000000; }
     .burger.is-show .burger__span--1 {
-      -webkit-transform: translateY(13px) rotate(45deg);
-              transform: translateY(13px) rotate(45deg); }
+      -webkit-transform: translateY(5px) rotate(45deg);
+              transform: translateY(5px) rotate(45deg); }
     .burger.is-show .burger__span--2 {
       -webkit-transform: translateX(-34px);
               transform: translateX(-34px); }
     .burger.is-show .burger__span--3 {
-      -webkit-transform: translateY(-12px) rotate(-45deg);
-              transform: translateY(-12px) rotate(-45deg); }
+      -webkit-transform: translateY(-11px) rotate(-45deg);
+              transform: translateY(-11px) rotate(-45deg); }
     @media not all and (min-resolution: 0.001dpcm) {
       @supports (-webkit-appearance: none) {
         .burger.is-show .burger__span--1 {
-          -webkit-transform: translateY(8px) rotate(45deg);
-                  transform: translateY(8px) rotate(45deg); }
+          -webkit-transform: translateY(7px) rotate(45deg);
+                  transform: translateY(7px) rotate(45deg); }
         .burger.is-show .burger__span--3 {
           -webkit-transform: translateY(-9px) rotate(-45deg);
                   transform: translateY(-9px) rotate(-45deg); } } }
@@ -12262,16 +12263,16 @@ small {
 .calc {
   position: absolute;
   left: 15px;
-  top: 30px;
-  width: 760px;
+  top: 43px;
+  width: 775px;
   z-index: 1;
   padding-top: 50px; }
   @media (max-width: 1150px) {
     .calc {
-      width: 670px; } }
+      width: 760px; } }
   @media (max-width: 1040px) {
     .calc {
-      width: 620px; } }
+      width: 670px; } }
   @media (max-width: 991px) {
     .calc {
       position: relative;
@@ -12313,14 +12314,33 @@ small {
     border: 1px solid rgba(67, 66, 66, 0.3);
     border-radius: 15px;
     margin-right: 10px;
-    outline: none !important; }
+    outline: none !important;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+    .calc__input input:focus {
+      border-color: #F99F4D; }
+  @media (min-width: 767px) {
+    .calc__input:hover input {
+      border-color: #6674C9; } }
+
+.calc__input--column {
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-right: 0; }
+  .calc__input--column span {
+    margin-left: 3px;
+    margin-bottom: 10px; }
 
 .calc__side {
   display: -webkit-box;
   display: flex;
   position: absolute;
   top: -4px;
-  left: 0; }
+  left: 0;
+  pointer-events: none; }
 
 .calc__side .link {
   position: relative;
@@ -12350,3 +12370,105 @@ small {
     cursor: default; }
     .calc__side .link.active::before {
       opacity: 1; }
+
+.calc__text {
+  max-width: 370px; }
+
+.swiper-slide .link--blue svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.calc__btn--next.hide {
+  display: none; }
+
+.js-go-to-basket {
+  display: none; }
+  .js-go-to-basket.show {
+    display: block; }
+
+.calc__goods {
+  border-radius: 20px;
+  background-color: #F7F7F7;
+  padding: 1.5rem 1.8rem 1.5rem 2rem;
+  margin-bottom: 2rem; }
+
+.calc__good {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  background: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  padding: 10px 15px; }
+  .calc__good .basket {
+    width: 31px;
+    height: 31px; }
+
+.calc__info {
+  position: relative;
+  font-size: 11px;
+  color: rgba(67, 66, 66, 0.6);
+  max-width: 280px;
+  margin-right: auto;
+  margin-bottom: 0; }
+  .calc__info::before {
+    position: absolute;
+    content: "";
+    left: -14px;
+    top: -10px;
+    width: 12px;
+    height: 12px;
+    background: url("../img/icons/info.png") 50% 50% no-repeat;
+    background-size: 10px 10px; }
+
+.calc__goods-container {
+  height: 230px;
+  overflow-y: scroll;
+  padding-right: 25px; }
+
+/* полоса прокрутки (скроллбар) */
+.calc__goods-container::-webkit-scrollbar {
+  width: 11px;
+  /* ширина для вертикального скролла */
+  height: 8px;
+  /* высота для горизонтального скролла */
+  background-color: #ffffff;
+  border-radius: 20px; }
+
+/* ползунок скроллбара */
+.calc__goods-container::-webkit-scrollbar-thumb {
+  background-color: rgba(66, 66, 66, 0.2);
+  border-radius: 20px; }
+
+.calc .good__name {
+  font-size: 14px;
+  width: 120px;
+  -webkit-box-flex: 0;
+          flex-grow: 0; }
+
+.calc .good__img {
+  width: 38px;
+  height: 48px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 30px; }
+
+.calc .good__amount {
+  color: rgba(66, 66, 66, 0.6);
+  margin-bottom: 0;
+  margin-right: 30px; }
+
+.calc .good__weight {
+  color: rgba(66, 66, 66, 0.6);
+  margin-bottom: 0;
+  margin-right: 30px; }
+
+.calc .good__price {
+  font-weight: 700;
+  font-size: 16px;
+  margin-right: 30px; }

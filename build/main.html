@@ -766,50 +766,175 @@
                   <div class="swiper-container">
                     <ul class="list swiper-wrapper">
                       <li class="swiper-slide" index="0">
-                        <p class="fs-24 fw-600">Введите метраж под герметизацию</p>
-                        <div class="calc__input mb-5">
-                          <input class="js-number" type="text">
-                          <span>Погонных метров</span>
+                        <p class="fs-24 fw-600 mb-4">Введите метраж под герметизацию</p>
+                        <div class="mb-5 d-flex flex-column">
+                          <label class="calc__input mb-4">
+                            <input class="js-number js-running-meters" type="text">
+                            <span>Погонных метров</span>
+                          </label>
+                          <a class="link link--blue d-flex align-items-center mr-auto js-dont-know" href="#">
+                            <span>Я не знаю метраж</span>
+                          </a>
                         </div>
-                        <p class="fs-24 fw-600">Из чего сделан дом?</p>
-                        <div class="calc__radio">
-                          <label class="radio">
-                            <input type="radio" name="material" value="ocilindrovannoe-bervno" checked>
-                            <span class="radio__button"></span>
-                            <span class="color-black fs-20">Оцилиндрованное бервно</span>
-                          </label>
-                          <label class="radio">
-                            <input type="radio" name="material" value="rublennoe-brevno">
-                            <span class="radio__button"></span>
-                            <span class="color-black fs-20">Рубленное бревно</span>
-                          </label>
-                          <label class="radio">
-                            <input type="radio" name="material" value="brus">
-                            <span class="radio__button"></span>
-                            <span class="color-black fs-20">Брус</span>
-                          </label>
-                        </div>
+                        <p class="calc__text">Метраж – это приблизительная длина всех швов под герметизацию. Для расчета мы используем среднюю высоту бруса/бревна 21 см</p>
                       </li>
                       <li class="swiper-slide" index="1">
-                        <p>step 2</p>
+                        <p class="fs-24 fw-600 mb-4">Давайте рассчитаем метраж</p>
+                        <div class="d-flex mb-2">
+                          <label class="calc__input calc__input--column mb-4 mr-4">
+                            <span>Длина стены 1, м</span>
+                            <input class="js-number js-length-wall-1" type="text">
+                          </label>
+                          <label class="calc__input calc__input--column mb-4">
+                            <span>Длина стены 2, м</span>
+                            <input class="js-number js-length-wall-2" type="text">
+                          </label>
+                        </div>
+                        <div class="d-flex mb-5">
+                          <label class="calc__input calc__input--column mb-4 mr-4">
+                            <span>Высота стен, м</span>
+                            <input class="js-number js-height-wall-1" type="text">
+                          </label>
+                          <label class="calc__input calc__input--column mb-4">
+                            <span>Высота бруса, см</span>
+                            <input class="js-number mb-2 js-height-bar" type="text">
+                            <span class="mb-0 text-muted fs-12">Стандартная высота бруса: ~ 20 см</span>
+                          </label>
+                        </div>
                       </li>
                       <li class="swiper-slide" index="2">
-                        <p>step 3</p>
+                        <div class="d-flex mb-4">
+                          <div class="d-flex mr-5">
+                            <p class="mb-0 fs-20 fw-600">Погонаж швов:</p>
+                            <p class="pl-2 fs-20 fw-600 color-orange mb-0">
+                              <span>258</span>
+                              <span>м</span>
+                            </p>
+                          </div>
+                          <div class="d-flex">
+                            <p class="mb-0 fs-20 fw-600">Расход герметика:</p>
+                            <p class="pl-2 fs-20 fw-600 color-orange mb-0">
+                              <span>39</span>
+                              <span>кг</span>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="calc__goods">
+                          <p class="mb-3 fs-18 fw-600">Варианты заказа</p>
+                          <div class="calc__goods-container">
+                            <div class="calc__good">
+                              <div class="good__img" style="background-image: url(/img/good-3.png);"></div>
+                              <div class="good__name">
+                                <p class="mb-0 fw-600">Ведро 10л</p>
+                              </div>
+                              <p class="good__amount">
+                                <span class="mr-1">4</span>
+                                <span>шт.</span>
+                              </p>
+                              <p class="good__weight">
+                                <span class="mr-1">40</span>
+                                <span>кг</span>
+                              </p>
+                              <div class="good__price">
+                                <span class="mr-1">2 266</span>
+                                <span>₽</span>
+                              </div>
+                              <a class="link basket" href="#">
+                                <svg width="15" height="15">
+                                  <use xlink:href="img/sprite/sprite.svg#icon-basket"></use>
+                                </svg>
+                              </a>
+                            </div>
+                            <div class="calc__good">
+                              <div class="good__img" style="background-image: url(/img/good-3.png);"></div>
+                              <div class="good__name">
+                                <p class="mb-0 fw-600">Ведро 5л</p>
+                              </div>
+                              <p class="good__amount">
+                                <span class="mr-1">14</span>
+                                <span>шт.</span>
+                              </p>
+                              <p class="good__weight">
+                                <span class="mr-1">40</span>
+                                <span>кг</span>
+                              </p>
+                              <div class="good__price">
+                                <span class="mr-1">2 266</span>
+                                <span>₽</span>
+                              </div>
+                              <a class="link basket" href="#">
+                                <svg width="15" height="15">
+                                  <use xlink:href="img/sprite/sprite.svg#icon-basket"></use>
+                                </svg>
+                              </a>
+                            </div>
+                            <div class="calc__good">
+                              <div class="good__img" style="background-image: url(/img/good-2.png);"></div>
+                              <div class="good__name">
+                                <p class="mb-0 fw-600">Фолиевая туба</p>
+                              </div>
+                              <p class="good__amount">
+                                <span class="mr-1">24</span>
+                                <span>шт.</span>
+                              </p>
+                              <p class="good__weight">
+                                <span class="mr-1">40</span>
+                                <span>кг</span>
+                              </p>
+                              <div class="good__price">
+                                <span class="mr-1">2 266</span>
+                                <span>₽</span>
+                              </div>
+                              <a class="link basket" href="#">
+                                <svg width="15" height="15">
+                                  <use xlink:href="img/sprite/sprite.svg#icon-basket"></use>
+                                </svg>
+                              </a>
+                            </div>
+                            <div class="calc__good">
+                              <div class="good__img" style="background-image: url(/img/good-4.png);"></div>
+                              <div class="good__name">
+                                <p class="mb-0 fw-600">Картридж</p>
+                              </div>
+                              <p class="good__amount">
+                                <span class="mr-1">40</span>
+                                <span>шт.</span>
+                              </p>
+                              <p class="good__weight">
+                                <span class="mr-1">40</span>
+                                <span>кг</span>
+                              </p>
+                              <div class="good__price">
+                                <span class="mr-1">2 266</span>
+                                <span>₽</span>
+                              </div>
+                              <a class="link basket" href="#">
+                                <svg width="15" height="15">
+                                  <use xlink:href="img/sprite/sprite.svg#icon-basket"></use>
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
                       </li>
                     </ul>
                   </div>
                   <div class="d-flex justify-content-end">
-                    <button class="btn btn--border mr-4 calc__btn calc__btn--prev" type="button">Назад</button>
-                    <button class="btn js-ripple btn--orange calc__btn calc__btn--next" type="button">
+                    <p class="calc__info">Рассчет является приблизительным и может варьироваться в зависимости от влажности древесины, ширины зазоров и других параметров</p>
+                    <button class="btn btn--border mr-4 calc__btn calc__btn--prev js-btn-prev" type="button">Назад</button>
+                    <button class="btn js-ripple btn--orange calc__btn calc__btn--next js-btn-next" type="button">
                       <div class="btn__content">Далее</div>
                     </button>
+                    <a class="btn js-ripple btn--orange js-go-to-basket" href="#" js-popup-open="js-popup-open" data-src="#modal-basket">
+                      <div class="btn__content">Оформить заказ</div>
+                    </a>
                   </div>
                 </div>
               </form>
             </div>
           </div>
           <div class="col-lg-6 d-none d-lg-block">
-            <div class="bg h-585 border-radius" style="background-image: url(../img/photo-4.jpg);"></div>
+            <div class="bg h-650 border-radius" style="background-image: url(../img/photo-4.jpg);"></div>
           </div>
         </div>
       </div>

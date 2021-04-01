@@ -111,6 +111,7 @@
   @media (max-width: $media-td) {
     margin-bottom: 2rem !important;
     font-size: 20px;
+    margin-left: 0 !important;
   }
 
   @media (max-width: 539px) {
@@ -205,7 +206,7 @@
     }
 
     .burger__span--1 {
-      transform: translateY(13px) rotate(45deg);
+      transform: translateY(5px) rotate(45deg);
     }
 
     .burger__span--2 {
@@ -213,14 +214,14 @@
     }
 
     .burger__span--3 {
-      transform: translateY(-12px) rotate(-45deg);
+      transform: translateY(-11px) rotate(-45deg);
     }
 
   @media not all and (min-resolution:.001dpcm)
   { @supports (-webkit-appearance:none) {
 
     .burger__span--1 {
-      transform: translateY(8px) rotate(45deg);
+      transform: translateY(7px) rotate(45deg);
     }
 
     .burger__span--3 {
