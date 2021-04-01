@@ -3,7 +3,7 @@
   flex-wrap: wrap;
 
   @media (max-width: $media-td) {
-    margin-right: -30px;
+    margin-right: -10px;
   }
 }
 
@@ -52,7 +52,7 @@
 
   @media (max-width: $media-tb) {
     width: calc(100% / 6 - 10px);
-    padding: 13px;
+    padding: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
 
@@ -186,8 +186,8 @@
   }
 
   @media (max-width: $media-tb) {
-    width: 25px;
-    height: 35px;
+    width: 20px;
+    height: 30px;
   }
 }
 

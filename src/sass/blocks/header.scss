@@ -107,6 +107,19 @@
   }
 }
 
+.menu .tel {
+  @media (max-width: $media-td) {
+    margin-bottom: 2rem !important;
+    font-size: 20px;
+  }
+
+  @media (max-width: 539px) {
+    span {
+      display: flex;
+    }
+  }
+}
+
 .header.scroll {
   padding-top: 0.5rem;
   padding-bottom: 0.2rem;

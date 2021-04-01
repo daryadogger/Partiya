@@ -55,11 +55,23 @@ const animation = () => {
           });
         });
       });
-      
+
     }
   }
 
+  const promo = $(".promo");
 
+  if (promo) {
+    const promoImgLg = promo.find(".promo__good--lg");
+    const promoImgSm = promo.find(".promo__good--sm");
+
+    $(document).ready(function () {
+      setTimeout(function() {
+        promoImgLg.addClass("show");
+        promoImgSm.addClass("show");
+      }, 300);
+    });
+  }
 
 };
 

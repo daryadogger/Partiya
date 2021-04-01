@@ -135,6 +135,7 @@
     width: 350px;
     height: 390px;
     z-index: 1;
+    opacity: 0;
 
     &--sm {
       width: 225px;
@@ -142,6 +143,19 @@
       left: auto;
       right: -23px;
       z-index: 2;
+      transform: translateY(15%);
+      transition: opacity 0.2s, transform 0.3s;
+      transition-delay: 0.3s;
+    }
+
+    &--lg {
+      transform: translateY(-50%);
+      transition: opacity 0.2s, transform 0.3s;
+    }
+
+    &.show {
+      opacity: 1;
+      transform: translate(0);
     }
 
     @media (max-width: $media-md) {
@@ -196,7 +210,6 @@
       }
     }
   }
-
 }
 
 .promo .fs-20 {
