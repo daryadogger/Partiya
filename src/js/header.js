@@ -28,7 +28,7 @@ const headerScroll = () => {
 
       main.css("padding-top", value);
     }
-    checkHeaderHeight();
+    // checkHeaderHeight();
 
     $(window).on("resize", checkHeaderHeight);
   }
