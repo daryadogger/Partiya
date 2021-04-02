@@ -11391,6 +11391,9 @@ small {
   .modal select option {
     color: #424242; }
 
+.modal--fast-order {
+  max-width: 590px; }
+
 .shade {
   position: fixed;
   bottom: 60px;

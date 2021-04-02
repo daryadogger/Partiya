@@ -159,9 +159,42 @@ mixin modal(data)
                 use(xlink:href="img/sprite/sprite.svg#icon-arrow-small")
               span В корзину
 
-            button.btn.btn--orange.js-ripple.mb-3(type="button")
+            button.btn.btn--orange.js-ripple.mb-3(type="submit")
               .btn__content Заказать
 
       .modal__footer
         .container
           p После нажатия на кнопку Заказать, мы свяжемся с вами, чтобы подтвердить заказ.
+
+
+  .modal.animated-modal.modal--fast-order(id="modal-fast-order" style="display:none;" class!=attributes.class)
+    form(method="POST" action="/")
+      .modal__side.pt-4.pl-3.pr-3.pb-4
+        .container.mt-2
+          .d-flex
+            h2.fw-700.mb-4.pr-md-4 Заказать в 1 клик
+            button.btn.modal__close(type="button" aria-label="Закрыть" data-fancybox-close)
+
+      .modal__main.pl-3.pr-3.pb-3.pb-sm-4.pt-4.pt-sm-5
+        .container
+          .mb-4.mb-sm-5
+            label.fieldset.fieldset--grey.mb-2
+              span.fieldset__label ФИО
+              input(type="text" name="name" autocomplete="off" required)
+
+            label.fieldset.fieldset--grey.mb-2
+              span.fieldset__label Эл. почта
+              input(type="email" name="email" autocomplete="off" required)
+
+            label.fieldset.fieldset--grey.mb-2
+              span.fieldset__label Телефон
+              input(type="text" name="tel" autocomplete="off" required)
+
+
+          button.btn.btn--orange.js-ripple.mb-3(type="submit")
+            .btn__content Заказать
+
+
+      .modal__footer
+        .container
+          p После нажатия на кнопку Заказать, мы свяжемся с вами.
