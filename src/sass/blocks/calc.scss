@@ -11,7 +11,7 @@
   }
 
   @media (max-width: 1040px) {
-    width: 670px;
+    width: 700px;
   }
 
   @media (max-width: $media-td) {
@@ -27,6 +27,10 @@
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
   border-radius: 0 25px 25px 25px;
   padding: 2.5rem 2rem 2rem;
+
+  @media (max-width: $media-sm) {
+    padding: 1.5rem 1rem 1rem;
+  }
 }
 
 .calc .btn {
@@ -35,10 +39,20 @@
 
 .calc .btn--border {
   padding: 10px 35px;
+
+  @media (max-width: $media-sm) {
+    padding: 10px 23px;
+    font-size: 14px;
+  }
 }
 
 .calc .btn__content {
   padding: 14px 35px;
+
+  @media (max-width: $media-sm) {
+    padding: 10px 23px;
+    font-size: 14px;
+  }
 }
 
 .calc__radio {
@@ -71,6 +85,16 @@
       }
     }
   }
+
+  @media (max-width: $media-sm) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+
+    input {
+      margin-right: 0;
+      margin-top: 10px;
+    }
+  }
 }
 
 .calc__input--column {
@@ -82,6 +106,12 @@
     margin-left: 3px;
     margin-bottom: 10px;
   }
+
+  @media (max-width: $media-sm) {
+    input {
+      margin-top: 0;
+    }
+  }
 }
 
 .calc__side {
@@ -90,6 +120,10 @@
   top: -4px;
   left: 0;
   pointer-events: none;
+
+  @media (max-width: $media-sm) {
+    top: 0;
+  }
 }
 
 .calc__side .link {
@@ -128,6 +162,10 @@
       opacity: 1;
     }
   }
+
+  @media (max-width: $media-sm) {
+    font-size: 16px;
+  }
 }
 
 .calc__text {
@@ -157,6 +195,11 @@
   background-color: #F7F7F7;
   padding: 1.5rem 1.8rem 1.5rem 2rem;
   margin-bottom: 2rem;
+
+  @media (max-width: $media-sm) {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 0.8rem 1.8rem 1rem;
+  }
 }
 
 .calc__good {
@@ -172,6 +215,14 @@
   .basket {
     width: 31px;
     height: 31px;
+  }
+
+  @media (max-width: $media-tb) {
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: $media-sm) {
+    padding: 12px 20px;
   }
 }
 
@@ -199,6 +250,14 @@
   height: 230px;
   overflow-y: scroll;
   padding-right: 25px;
+
+  @media (max-width: $media-tb) {
+    height: 325px;
+  }
+
+  @media (max-width: $media-sm) {
+    padding-right: 10px;
+  }
 }
 
  /* полоса прокрутки (скроллбар) */
@@ -218,8 +277,9 @@
 .calc {
   .good__name {
     font-size: 14px;
-    width: 120px;
+    width: 115px;
     flex-grow: 0;
+    margin-bottom: 0;
   }
 
   .good__img {
@@ -234,18 +294,74 @@
   .good__amount {
     color: rgba($grey, 0.6);
     margin-bottom: 0;
-    margin-right: 30px;
+    margin-right: 35px;
   }
 
   .good__weight {
     color: rgba($grey, 0.6);
     margin-bottom: 0;
     margin-right: 30px;
+
+    @media (max-width: $media-sm) {
+      margin-right: 0;
+    }
   }
 
   .good__price {
     font-weight: 700;
     font-size: 16px;
-    margin-right: 30px;
+    margin-right: 35px;
+  }
+
+  .calc__subtitle .fs-20 {
+    @media (max-width: $media-tb) {
+      font-size: 18px;
+    }
+
+    @media (max-width: $media-sm) {
+      font-size: 16px;
+    }
+  }
+
+  .swiper-slide {
+    .fs-24 {
+      @media (max-width: $media-sm) {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.calc__group {
+  width: auto;
+
+  &--name {
+    width: auto;
+  }
+
+  &--price {
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 750px) {
+    width: 50%;
+    margin-bottom: 0;
+
+    &--name {
+      width: 100%;
+    }
+
+    &--price {
+      justify-content: flex-end;
+    }
+  }
+
+  @media (max-width: 470px) {
+    width: 100%;
+    margin-bottom: 10px;
+
+    &--price {
+      justify-content: space-between;
+    }
   }
 }

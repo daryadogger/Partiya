@@ -583,34 +583,34 @@ block main
                       li.swiper-slide(index="1")
                         p.fs-24.fw-600.mb-4 Давайте рассчитаем метраж
 
-                        .d-flex.mb-2
-                          label.calc__input.calc__input--column.mb-4.mr-4
+                        .d-flex.mb-sm-2.flex-column.flex-sm-row
+                          label.calc__input.calc__input--column.mb-3.mb-sm-4.mr-4
                             span Длина стены 1, м
                             input.js-number.js-length-wall-1(type="text")
 
-                          label.calc__input.calc__input--column.mb-4
+                          label.calc__input.calc__input--column.mb-3.mb-sm-4
                             span Длина стены 2, м
                             input.js-number.js-length-wall-2(type="text")
 
-                        .d-flex.mb-5
-                          label.calc__input.calc__input--column.mb-4.mr-4
+                        .d-flex.mb-3.mb-sm-5.flex-column.flex-sm-row
+                          label.calc__input.calc__input--column.mb-3.mb-sm-4.mr-4
                             span Высота стен, м
                             input.js-number.js-height-wall-1(type="text")
 
-                          label.calc__input.calc__input--column.mb-4
+                          label.calc__input.calc__input--column.mb-3.mb-sm-4
                             span Высота бруса, см
                             input.js-number.mb-2.js-height-bar(type="text")
                             span.mb-0.text-muted.fs-12 Стандартная высота бруса: ~ 20 см
 
                       li.swiper-slide(index="2")
-                        .d-flex.mb-4
-                          .d-flex.mr-5
+                        .d-flex.mb-4.flex-column.flex-sm-row
+                          .d-flex.mr-sm-5.calc__subtitle.mb-2.mb-sm-0
                             p.mb-0.fs-20.fw-600 Погонаж швов:
                             p.pl-2.fs-20.fw-600.color-orange.mb-0
                               span 258
                               span м
 
-                          .d-flex
+                          .d-flex.calc__subtitle
                             p.mb-0.fs-20.fw-600 Расход герметика:
                             p.pl-2.fs-20.fw-600.color-orange.mb-0
                               span 39
@@ -621,105 +621,117 @@ block main
 
                           .calc__goods-container
                             .calc__good
-                              .good__img(style="background-image: url(/img/good-3.png);")
+                              .d-flex.align-items-center.calc__group.calc__group--name
+                                .good__img(style="background-image: url(/img/good-3.png);")
 
-                              .good__name
-                                p.mb-0.fw-600 Ведро 10л
+                                .good__name
+                                  p.mb-0.fw-600 Ведро 10л
 
-                              p.good__amount
-                                span.mr-1 4
-                                span шт.
+                              .d-flex.calc__group
+                                p.good__amount
+                                  span.mr-1 4
+                                  span шт.
 
-                              p.good__weight
-                                span.mr-1 40
-                                span кг
+                                p.good__weight
+                                  span.mr-1 40
+                                  span кг
 
-                              .good__price
-                                span.mr-1 2 266
-                                span ₽
+                              .d-flex.align-items-center.calc__group.calc__group--price
+                                .good__price
+                                  span.mr-1 2 266
+                                  span ₽
 
-                              a.link.basket(href="#")
-                                svg(width='15' height='15')
-                                  use(xlink:href="img/sprite/sprite.svg#icon-basket")
-
-                            .calc__good
-                              .good__img(style="background-image: url(/img/good-3.png);")
-
-                              .good__name
-                                p.mb-0.fw-600 Ведро 5л
-
-                              p.good__amount
-                                span.mr-1 14
-                                span шт.
-
-                              p.good__weight
-                                span.mr-1 40
-                                span кг
-
-
-                              .good__price
-                                span.mr-1 2 266
-                                span ₽
-
-                              a.link.basket(href="#")
-                                svg(width='15' height='15')
-                                  use(xlink:href="img/sprite/sprite.svg#icon-basket")
+                                a.link.basket(href="#")
+                                  svg(width='15' height='15')
+                                    use(xlink:href="img/sprite/sprite.svg#icon-basket")
 
                             .calc__good
-                              .good__img(style="background-image: url(/img/good-2.png);")
+                              .d-flex.align-items-center.calc__group.calc__group--name
+                                .good__img(style="background-image: url(/img/good-3.png);")
 
-                              .good__name
-                                p.mb-0.fw-600 Фолиевая туба
+                                .good__name
+                                  p.mb-0.fw-600 Ведро 5л
 
-                              p.good__amount
-                                span.mr-1 24
-                                span шт.
+                              .d-flex.calc__group
+                                p.good__amount
+                                  span.mr-1 14
+                                  span шт.
 
-                              p.good__weight
-                                span.mr-1 40
-                                span кг
+                                p.good__weight
+                                  span.mr-1 40
+                                  span кг
 
+                              .d-flex.align-items-center.calc__group.calc__group--price
+                                .good__price
+                                  span.mr-1 2 266
+                                  span ₽
 
-                              .good__price
-                                span.mr-1 2 266
-                                span ₽
-
-                              a.link.basket(href="#")
-                                svg(width='15' height='15')
-                                  use(xlink:href="img/sprite/sprite.svg#icon-basket")
+                                a.link.basket(href="#")
+                                  svg(width='15' height='15')
+                                    use(xlink:href="img/sprite/sprite.svg#icon-basket")
 
                             .calc__good
-                              .good__img(style="background-image: url(/img/good-4.png);")
+                              .d-flex.align-items-center.calc__group.calc__group--name
+                                .good__img(style="background-image: url(/img/good-2.png);")
 
-                              .good__name
-                                p.mb-0.fw-600 Картридж
+                                .good__name
+                                  p.mb-0.fw-600 Фолиевая туба
 
-                              p.good__amount
-                                span.mr-1 40
-                                span шт.
+                              .d-flex.calc__group
+                                p.good__amount
+                                  span.mr-1 24
+                                  span шт.
 
-                              p.good__weight
-                                span.mr-1 40
-                                span кг
+                                p.good__weight
+                                  span.mr-1 40
+                                  span кг
 
-                              .good__price
-                                span.mr-1 2 266
-                                span ₽
+                              .d-flex.align-items-center.calc__group.calc__group--price
+                                .good__price
+                                  span.mr-1 2 266
+                                  span ₽
 
-                              a.link.basket(href="#")
-                                svg(width='15' height='15')
-                                  use(xlink:href="img/sprite/sprite.svg#icon-basket")
+                                a.link.basket(href="#")
+                                  svg(width='15' height='15')
+                                    use(xlink:href="img/sprite/sprite.svg#icon-basket")
+
+                            .calc__good
+                              .d-flex.align-items-center.calc__group.calc__group--name
+                                .good__img(style="background-image: url(/img/good-4.png);")
+
+                                .good__name
+                                  p.mb-0.fw-600 Картридж
+
+                              .d-flex.calc__group
+                                p.good__amount
+                                  span.mr-1 40
+                                  span шт.
+
+                                p.good__weight
+                                  span.mr-1 40
+                                  span кг
+
+                              .d-flex.align-items-center.calc__group.calc__group--price
+                                .good__price
+                                  span.mr-1 2 266
+                                  span ₽
+
+                                a.link.basket(href="#")
+                                  svg(width='15' height='15')
+                                    use(xlink:href="img/sprite/sprite.svg#icon-basket")
 
 
 
-                  .d-flex.justify-content-end
-                    p.calc__info Рассчет является приблизительным и может варьироваться в зависимости от влажности древесины, ширины зазоров и других параметров
-                    button.btn.btn--border.mr-4.calc__btn.calc__btn--prev.js-btn-prev(type="button") Назад
-                    button.btn.js-ripple.btn--orange.calc__btn.calc__btn--next.js-btn-next(type="button")
-                      .btn__content Далее
+                  .d-flex.justify-content-end.flex-wrap.align-items-center
+                    p.calc__info.mb-3.ml-3.ml-sm-0 Рассчет является приблизительным и может варьироваться в зависимости от влажности древесины, ширины зазоров и других параметров
 
-                    a.btn.js-ripple.btn--orange.js-go-to-basket(href="#" js-popup-open="js-popup-open" data-src="#modal-basket")
-                      .btn__content Оформить заказ
+                    .d-flex
+                      button.btn.btn--border.mr-2.mr-sm-4.calc__btn.calc__btn--prev.js-btn-prev(type="button") Назад
+                      button.btn.js-ripple.btn--orange.calc__btn.calc__btn--next.js-btn-next(type="button")
+                        .btn__content Далее
+
+                      a.btn.js-ripple.btn--orange.js-go-to-basket(href="#" js-popup-open="js-popup-open" data-src="#modal-basket")
+                        .btn__content Оформить заказ
 
 
           .col-lg-6.d-none.d-lg-block
