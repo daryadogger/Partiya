@@ -29,6 +29,11 @@
       padding: 16px 45px;
     }
   }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    //rules for ie
+    height: 560px;
+  }
 }
 
 .animated-item {

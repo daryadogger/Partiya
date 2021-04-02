@@ -214,7 +214,6 @@ const calcSlider = function calcSlider() {
   const bank05WeightSpan = container.find(".js-bank05-weight");
   const bank031WeightSpan = container.find(".js-bank031-weight");
 
-
   // Считает сколько нужно товаров на третьем слайде
   function calcGoods(val) {
     const amountBank10 = Math.ceil(val / 10);

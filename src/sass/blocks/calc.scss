@@ -244,6 +244,10 @@
     background: url("../img/icons/info.png") 50% 50% no-repeat;
     background-size: 10px 10px;
   }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    max-width: 100%;
+  }
 }
 
 .calc__goods-container {
